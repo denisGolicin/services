@@ -122,24 +122,31 @@ main{
   overflow-y: auto;
 
 }
-.main::-webkit-scrollbar {
+main::-webkit-scrollbar {
   width: 12px;               /* ширина scrollbar */
 }
-.main::-webkit-scrollbar-track {
+main::-webkit-scrollbar-track {
   background: var(--main-color)       /* цвет дорожки */
 }
-.main::-webkit-scrollbar-thumb {
+main::-webkit-scrollbar-thumb {
   background-color: #ffffff18;    /* цвет плашки */
   border-radius: 20px;       /* закругления плашки */
   border: 3px solid var(--main-color)  /* padding вокруг плашки */
 }
-.title{
+.title, .title-all{
   width: 90%;
   max-width: 700px;
   margin-top: 30px;
+}
+.title{
   opacity: 0;
   animation: title 2s forwards;
   animation-delay: 1s;
+}
+.title-all{
+  font-size: 20px;
+  text-align: center;
+  margin-top: 10px;
 }
 h1{
   
@@ -154,11 +161,15 @@ h1{
   }
 }
 
-.main-window{
+.main-window, .wrapper-advantages{
   width: 90%;
   max-width: 700px;
   height: 400px;
   margin-top: 20px;
+  height: fit-content;
+}
+.wrapper-advantages{
+  margin-top: 0px;
 }
 
 .window-message{
@@ -252,4 +263,37 @@ h1{
 }
 .button-request:hover{
   transform: scale(1.1);
+}
+.wrapper-advantages:first-child{
+  margin-top: 0px !important;
+}
+.advantages-element{
+  width: 100%;
+  height: fit-content;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+  background-color: var(--main-color);
+  opacity: .8;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+.advantages-element>div>img{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 15px;
+  margin-left: 15px;
+
+}
+.advantages-element>p{
+  font-size: 12px;
+  text-align: center;
+  margin-top: 10px;
+  background-color: #ffffff5b;
+  padding: 10px;
+  border-radius: 5px;
 }

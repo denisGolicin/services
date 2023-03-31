@@ -41,6 +41,14 @@
     .header-title{
         padding: 15px;
     }
+    .advantages-element{
+        flex-direction: column;
+    }
+    .advantages-element>p{
+        text-align: center;
+        margin-top: 10px;
+    }
+   
     
 }
 
