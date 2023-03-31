@@ -88,7 +88,7 @@
 .large-header {
     position: relative;
     width: 100%;
-    background: #333;
+    background: rgb(34,33,73);
     overflow: hidden;
     background-size: cover;
     background-position: center center;
