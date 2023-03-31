@@ -28,8 +28,6 @@ body, html{
   white-space: nowrap;
 }
 
-
-
 .wrapper{
   width: 100%;
   height: 100%;
@@ -37,20 +35,8 @@ body, html{
   top: 0;
   left: 0;
 
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow: hidden;
   margin-top: 60px;
-}
-.wrapper::-webkit-scrollbar {
-  width: 12px;               /* ширина scrollbar */
-}
-.wrapper::-webkit-scrollbar-track {
-  background: var(--main-color)       /* цвет дорожки */
-}
-.wrapper::-webkit-scrollbar-thumb {
-  background-color: #ffffff18;    /* цвет плашки */
-  border-radius: 20px;       /* закругления плашки */
-  border: 3px solid var(--main-color)  /* padding вокруг плашки */
 }
 
 header{
@@ -127,41 +113,43 @@ header{
 
 main{
   width: 100%;
+  height: fit-content;
   height: calc(100% - 60px);
   display: flex;
   align-items: center;
   flex-direction: column;
-  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+}
+.main::-webkit-scrollbar {
+  width: 12px;               /* ширина scrollbar */
+}
+.main::-webkit-scrollbar-track {
+  background: var(--main-color)       /* цвет дорожки */
+}
+.main::-webkit-scrollbar-thumb {
+  background-color: #ffffff18;    /* цвет плашки */
+  border-radius: 20px;       /* закругления плашки */
+  border: 3px solid var(--main-color)  /* padding вокруг плашки */
+}
+.title{
+  width: 90%;
+  max-width: 700px;
   margin-top: 30px;
+  opacity: 0;
+  animation: title 2s forwards;
+  animation-delay: 1s;
 }
 h1{
-  font-size: 5px;
-  position: absolute;
-  width: 90%;
-  top: calc(50% - 60px);
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0);
-  animation: title 4s forwards;
-  opacity: 0;
+  
   text-shadow: 0 0 5px black;
   margin-top: 10px;
   text-align: center;
 }
 
 @keyframes title {
-  50%{
-    font-size: 24px;
-    opacity: 1;
-    transform: translate(-50%, -50%);
-  }
-  75%{
-    top: calc(50% - 60px);
-    font-size: 24px;
-  }
   100%{
-    font-size: 16px;
-    top: 0;
-    transform: translate(-50%, -50%);
     opacity: 1;
   }
 }
@@ -241,7 +229,7 @@ h1{
   transform: scale(0);
   opacity: 0;
   animation: box-req 2s forwards;
-  animation-delay: 5.5s;
+  animation-delay: 2.3s;
 }
 @keyframes box-req {
   100%{

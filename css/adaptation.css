@@ -29,6 +29,18 @@
         
 
     }
+    .title{
+        margin-top: 10px;
+    }
+    .main-window{
+        margin-top: 0;
+    }
+    .button-request{
+        margin-top: 20px;
+    }
+    .header-title{
+        padding: 15px;
+    }
     
 }
 
