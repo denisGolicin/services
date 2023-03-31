@@ -1,0 +1,113 @@
+@keyframes typing {
+  0.0000%, 27.3488% { content: ""; }
+  1.1395%, 26.2093% { content: "s"; }
+  2.2791%, 25.0698% { content: "so"; }
+  3.4186%, 23.9302% { content: "sof"; }
+  4.5581%, 22.7907% { content: "soft"; }
+  5.6977%, 21.6512% { content: "softw"; }
+  6.8372%, 20.5116% { content: "softwa"; }
+  7.9767%, 19.3721% { content: "softwar"; }
+  9.1163%, 18.2326% { content: "software"; }
+
+  30.7674%, 51.2791% { content: ""; }
+  31.9070%, 50.1395% { content: "m"; }
+  33.0465%, 49.0000% { content: "mo"; }
+  34.1860%, 47.8605% { content: "mob"; }
+  35.3256%, 46.7209% { content: "mobi"; }
+  36.4651%, 45.5814% { content: "mobil"; }
+  37.6047%, 44.4419% { content: "mobile"; }
+
+  54.6977%, 75.2093% { content: ""; }
+  55.8372%, 74.0698% { content: "w"; }
+  56.9767%, 72.9302% { content: "we"; }
+  58.1163%, 71.7907% { content: "web"; }
+  59.2558%, 70.6512% { content: "web-"; }
+  60.3953%, 69.5116% { content: "web-s"; }
+  61.5349%, 68.3721% { content: "web-si"; }
+  62.5349%, 67.3721% { content: "web-sit"; }
+  63.5349%, 66.3721% { content: "web-site"; }
+
+  78.6279%, 96.8605% { content: ""; }
+  79.7674%, 95.7209% { content: "b"; }
+  80.9070%, 94.5814% { content: "bo"; }
+  82.0465%, 93.4419% { content: "bot"; }
+  83.1860%, 92.3023% { content: "bots"; }
+
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.typewriter {
+  --caret: currentcolor;
+  color: yellow;
+}
+
+.typewriter::before {
+  content: "";
+  animation: typing 13.5s infinite;
+}
+
+.typewriter::after {
+  content: "";
+  border-right: 1px solid var(--caret);
+  animation: blink 0.5s linear infinite;
+}
+
+.typewriter.thick::after {
+  border-right: 1ch solid var(--caret);
+}
+
+.typewriter.nocaret::after {
+  border-right: 0;
+}
+
+
+@media (prefers-reduced-motion) {
+  .typewriter::after {
+    animation: none;
+  }
+  
+  @keyframes sequencePopup {
+    0%, 100% { content: "software"; }
+    25% { content: "mobile"; }
+    50% { content: "web-site"; }
+    75% { content: "bots"; }
+  }
+
+  .typewriter::before {
+    content: "software";
+    animation: sequencePopup 12s linear infinite;
+  }
+}
+
+/* anim */
+/* Header */
+.large-header {
+    position: relative;
+    width: 100%;
+    background: #333;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center center;
+  }
+  #large-header {
+    background-image: url("../src/images/body.jpg");
+  }
+  
+  .demo-1 .main-title {
+    text-transform: uppercase;
+    font-size: 4.2em;
+    letter-spacing: 0.1em;
+  }
+  .main-title .thin {
+    font-weight: 200;
+  }
+  @media only screen and (max-width: 768px) {
+    .demo-1 .main-title {
+      font-size: 3em;
+    }
+  }
+  

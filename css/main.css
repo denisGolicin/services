@@ -1,0 +1,264 @@
+@font-face { 
+    font-family: "MullerLight";
+    src: url("fonts/MullerLight.eot");
+    src: url("fonts/MullerLight.eot?#iefix")format("embedded-opentype"),
+    url("fonts/MullerLight.woff") format("woff"),
+    url("fonts/MullerLight.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 300;
+}
+:root{
+  --main-color: rgb(34,33,73);
+  --button-color: rgb(90, 147, 192);
+}
+
+body, html{
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+  font-family: "MullerLight" !important;
+  color: #fff;
+  position: relative;
+}
+
+.typing-text{
+  text-shadow: 0 0 5px black;
+  font-size: 18px;
+  white-space: nowrap;
+}
+
+
+
+.wrapper{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin-top: 60px;
+}
+.wrapper::-webkit-scrollbar {
+  width: 12px;               /* ширина scrollbar */
+}
+.wrapper::-webkit-scrollbar-track {
+  background: var(--main-color)       /* цвет дорожки */
+}
+.wrapper::-webkit-scrollbar-thumb {
+  background-color: #ffffff18;    /* цвет плашки */
+  border-radius: 20px;       /* закругления плашки */
+  border: 3px solid var(--main-color)  /* padding вокруг плашки */
+}
+
+header{
+  width: 100%;
+  height: 60px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(34, 33, 73, 0.493);
+  box-shadow: 0 0 5px black;
+
+  position: fixed;
+  transform: translateY(-60px);
+}
+
+.header-title,.header-nav,.header-button{
+
+  height: 100%;
+}
+
+.header-title{
+  width: 35%;
+
+  display: flex;
+  align-items: center;
+  padding: 20px;
+
+}
+.header-nav{
+  width: 50%;
+  display: flex;
+  
+  align-items: center;
+
+}
+.header-nav>p{
+  margin-right: 20px;
+  margin-left: 20px;
+  font-size: 16px;
+
+  cursor: pointer;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  transition: .3s ;
+  border-bottom: 1px solid #fffb0000;
+}
+.header-nav>p:hover{
+  border-color: #fffb00;
+}
+.header-button{
+  width: 15%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.header-button>button{
+
+  background-color: var(--button-color);
+  padding: 10px 20px 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px black;
+  color: #fff;
+  cursor: pointer;
+  transition: .3s;
+}
+.header-button>button:hover{
+  transform: scale(1.1);
+}
+
+main{
+  width: 100%;
+  height: calc(100% - 60px);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  margin-top: 30px;
+}
+h1{
+  font-size: 5px;
+  position: absolute;
+  width: 80%;
+  top: calc(50% - 60px);
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: title 4s forwards;
+  opacity: 0;
+  text-shadow: 0 0 5px black;
+  margin-top: 10px;
+  text-align: center;
+}
+
+@keyframes title {
+  50%{
+    font-size: 24px;
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+  75%{
+    top: calc(50% - 60px);
+    font-size: 24px;
+  }
+  100%{
+    font-size: 16px;
+    top: 0;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}
+
+.main-window{
+  width: 700px;
+  height: 400px;
+  margin-top: 20px;
+}
+
+.window-message{
+  width: fit-content;
+  padding: 10px;
+  background-color: var(--main-color);
+  border-radius: 5px;
+  box-shadow: 0 0 5px black;
+  transition: .3s;
+  cursor: pointer;
+  opacity: .8;
+}
+.window-message:hover{
+  transform: scale(1.05);
+  opacity: 1;
+}
+.window-message>p{
+  width: fit-content;
+  padding: 10px;
+  background-color: #ffffff5b;
+  border-radius: 5px;
+}
+.message-info{
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.message-info>img{
+  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.window-message-wrapper{
+  width: 100%;
+  display: flex;
+  margin-top: 20px;
+}
+.message-left{
+  justify-content: flex-start;
+  transform: translateX(-2000px);
+  animation: anim-left .6s forwards;
+}
+.message-right{
+  justify-content: flex-end;
+  transform: translateX(2000px);
+  animation: anim-right .6s forwards;
+}
+
+@keyframes anim-left {
+  100%{
+    transform: translateX(0);
+  }
+}
+@keyframes anim-right {
+  100%{
+    transform: translateX(0);
+  }
+}
+
+.box-request{
+  width: 700px;
+  padding: 10px;
+  text-align: center;
+  transform: scale(0);
+  opacity: 0;
+  animation: box-req 2s forwards;
+  animation-delay: 5.5s;
+}
+@keyframes box-req {
+  100%{
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.box-request>p{
+  font-size: 16px;
+}
+.button-request{
+  padding: 10px 20px 10px 20px;
+  background-color: var(--button-color);
+  border-radius: 5px;
+  box-shadow: 0 0 5px black;
+  color: #fff;
+  cursor: pointer;
+  transition: .3s;
+  margin-top: 10px;
+}
+.button-request:hover{
+  transform: scale(1.1);
+}
