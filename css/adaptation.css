@@ -26,30 +26,12 @@
     }
     .header-title{
         width: 100%;
-        justify-content: center;
+        
 
     }
-    .window-message{
-
-        max-width: 250px;
-
-    }
-    .main-window{
-        max-width: 500px;
-    }
-    main{
-        height: fit-content;
-    }
+    
 }
 
 @media (max-width: 548px){
-    .window-message{
-
-        max-width: 130px;
-
-    }
-    .main-window{
-        max-width: 300px;
-        height: auto;
-    }
+   
 }

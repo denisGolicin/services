@@ -137,7 +137,7 @@ main{
 h1{
   font-size: 5px;
   position: absolute;
-  width: 80%;
+  width: 90%;
   top: calc(50% - 60px);
   left: 50%;
   transform: translate(-50%, -50%) scale(0);
@@ -167,13 +167,15 @@ h1{
 }
 
 .main-window{
-  width: 700px;
+  width: 90%;
+  max-width: 700px;
   height: 400px;
   margin-top: 20px;
 }
 
 .window-message{
   width: fit-content;
+  max-width: 80%;
   padding: 10px;
   background-color: var(--main-color);
   border-radius: 5px;
@@ -232,7 +234,8 @@ h1{
 }
 
 .box-request{
-  width: 700px;
+  width: 95%;
+  max-width: 700px;
   padding: 10px;
   text-align: center;
   transform: scale(0);
@@ -257,7 +260,7 @@ h1{
   color: #fff;
   cursor: pointer;
   transition: .3s;
-  margin-top: 10px;
+  margin-top: 30px;
 }
 .button-request:hover{
   transform: scale(1.1);
