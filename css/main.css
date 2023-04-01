@@ -161,7 +161,7 @@ h1{
   }
 }
 
-.main-window, .wrapper-advantages{
+.main-window, .wrapper-advantages, .wrapper-services{
   width: 90%;
   max-width: 700px;
   height: 400px;
@@ -170,6 +170,8 @@ h1{
 }
 .wrapper-advantages{
   margin-top: 0px;
+  margin-bottom: 10px;
+
 }
 
 .window-message{
@@ -268,6 +270,7 @@ h1{
 .wrapper-advantages:first-child{
   margin-top: 0px !important;
 }
+
 .advantages-element{
   width: 100%;
   height: fit-content;
@@ -296,11 +299,60 @@ h1{
   margin-left: 15px;
 
 }
-.advantages-element>p{
+.advantages-element>.advantages-text{
   font-size: 12px;
   text-align: center;
   margin-top: 10px;
   background-color: #ffffff5b;
   padding: 10px;
   border-radius: 5px;
+}
+.advantages-element>.advantages-title{
+  margin-top: 10px;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+
+  border-bottom: 1px solid yellow;
+}
+.wrapper-services{
+  margin-bottom: 10px;
+}
+.services-element:first-child{
+  margin-top: 0px !important;
+}
+.services-element{
+  width: 100%;
+  
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  background-color: #ffffff25;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 0 5px black;
+  cursor: pointer;
+  transition: .3s;
+  
+}
+.services-element:hover{
+  transform: scale(1.05);
+}
+.services-element>img{
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+
+}
+
+footer{
+  display: none;
+  width: 100%;
+  height: 50px;
+  border: 1px solid red;
+}
+footer>img{
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+  margin-left: 20px;
 }

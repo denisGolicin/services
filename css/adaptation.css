@@ -44,9 +44,20 @@
     .advantages-element{
         flex-direction: column;
     }
-    .advantages-element>p{
+    .advantages-element>.advantages-text{
         text-align: center;
         margin-top: 10px;
+    }
+    .services-element>p{
+        font-size: 12px;
+    }
+    main{
+        height: calc(100% - 110px);
+    }
+    footer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
    
     
