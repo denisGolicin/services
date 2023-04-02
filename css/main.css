@@ -175,7 +175,7 @@ h1{
   }
 }
 
-.main-window, .wrapper-advantages, .wrapper-services, .wrapper-projects{
+.main-window, .wrapper-advantages, .wrapper-services, .wrapper-projects, .wrapper-clients{
   width: 90%;
   max-width: 700px;
   height: 400px;
@@ -411,7 +411,6 @@ h1{
 
 }
 .projects-box:hover{
-  transform: scale(1.03);
   opacity: 1;
 }
 .projects-box>img{
@@ -467,6 +466,46 @@ h1{
 
 }
 
+.wrapper-clients{
+  min-height: 120px;
+  position: relative;
+  overflow: hidden;
+}
+.wrapper-clients-elements{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  top: 0;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+  
+}
+
+.wrapper-clients-elements::-webkit-scrollbar {
+  width: 10px;               /* ширина scrollbar */
+}
+.wrapper-clients-elements::-webkit-scrollbar-track {
+  background: var(--main-color)       /* цвет дорожки */
+}
+.wrapper-clients-elements::-webkit-scrollbar-thumb {
+  background-color: #ffffff18;    /* цвет плашки */
+  border-radius: 1px;       /* закругления плашки */
+  border: 5px solid var(--main-color)  /* padding вокруг плашки */
+}
+
+.wrapper-clients-elements>img{
+  width: 80px;
+  height: 80px;
+  margin: 10px;
+  border-radius: 15px;
+}
+
 footer{
   display: none;
   width: 100%;
@@ -475,8 +514,8 @@ footer{
 }
 
 footer>img{
-  width: 30px;
-  height: 30px;
-  margin-right: 20px;
-  margin-left: 20px;
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+  margin-left: 15px;
 }
