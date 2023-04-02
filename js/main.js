@@ -61,9 +61,30 @@ projectButtonLeft.addEventListener('click', function(){
 });
 
 buttonOrder.addEventListener('click', function(){
-    if(buttonOrder.innerText === "Заказать проект") console.log('Заказать проект');
+    if(buttonOrder.innerText === "Заказать проект") {
+        froma.style.opacity = '1';
+        froma.style.zIndex = '100';
+    }
     else console.log('Онлайн консультация');
 })
+
+const projectHeader = document.querySelector('#project-header');
+const froma = document.querySelector('.form-wrapper');
+const buttonCloseForm = document.querySelector('.button-close');
+
+buttonCloseForm.addEventListener('click', function(){
+
+    froma.style.opacity = '0';
+    froma.style.zIndex = '0';
+
+});
+
+projectHeader.addEventListener('click', function(){
+
+    froma.style.opacity = '1';
+    froma.style.zIndex = '100';
+
+});
 
 document.addEventListener('DOMContentLoaded', function() {
 

@@ -10,6 +10,7 @@
 :root{
   --main-color: rgb(34,33,73);
   --button-color: rgb(90, 147, 192);
+  --after-color: rgb(26,26,62);
 }
 
 body, html{
@@ -457,8 +458,6 @@ h1{
 
   width: 50px;
   height: 50px;
-  box-shadow: 0 0 5px black;
-  border-radius: 50%;
   cursor: pointer;
 
 }
@@ -574,4 +573,73 @@ footer>img, footer>a>img{
   height: 40px;
   margin-right: 15px;
   margin-left: 15px;
+}
+
+
+.form-wrapper{
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(34, 33, 73, 0.644);
+
+  opacity: 0;
+  transition: 1s;
+}
+
+.form-box{
+  width: 90%;
+  max-width: 500px;
+  height: fit-content;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--main-color);
+  border-radius: 5px;
+  box-shadow: 0 0 5px black;
+  padding: 20px;
+}
+.form-box>input{
+  width: 90%;
+  max-width: 400px;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: var(--after-color);
+  color: #fff;
+}
+.form-box>img{
+  max-width: 90%;
+  border-radius: 5px;
+}
+.form-box>button{
+  margin-top: 20px;
+  padding: 10px 20px 10px 20px;
+  color: #fff;
+  background-color: var(--button-color);
+  box-shadow: 0 0 5px black;
+  border-radius: 5px;
+}
+.form-box>div{
+  position: relative;
+  width: 100%;
+}
+.button-close{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 0;
+  left: 100%;
+  transform: translate(-50%, -150%);
+  cursor: pointer;
 }
