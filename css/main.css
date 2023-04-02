@@ -136,6 +136,7 @@ main{
   flex-direction: column;
   overflow-x: hidden;
   overflow-y: hidden;
+  padding-right: 12px;
   /* scroll-behavior: smooth; */
 
 }
@@ -378,7 +379,8 @@ h1{
 }
 .wrapper-projects-box{
   width: 100%;
-  min-height: 350px;
+  height: 400px;
+  
   overflow: hidden;
   position: relative;
 }
@@ -431,8 +433,8 @@ h1{
   max-width: 400px;
   text-align: center;
   padding: 10px;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   background-color: #ffffff2c;
   border-radius: 5px;
 }
@@ -663,4 +665,9 @@ footer>img, footer>a>img{
 
   opacity: 0;
   transition: .3s;
+}
+.info-itdilab{
+  text-align: center;
+  font-size: 12px;
+  opacity: .9;
 }

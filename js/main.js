@@ -195,6 +195,7 @@ function addDelay(){
 
     setTimeout(function(){
         mainBox.style.overflowY = "auto";
+        mainBox.style.paddingRight = '0';
     }, 5000);
 }
 
