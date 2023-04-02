@@ -103,12 +103,7 @@ sendForm.addEventListener('click', function(){
         invalidInput(contactForm);
         return false;
     }
-    sendMessage(`
-    Заявка с сайта It Digital Lab Soft!\n
-    Заказчик: ${nameForm.value}\n
-    Связь с ним: ${contactForm.value}\n
-    Допольнительная информация: ${infoForm.value}
-    `);
+    sendMessage(`Заявка с сайта It Digital Lab Soft!\nЗаказчик: ${nameForm.value}\nСвязь с ним: ${contactForm.value}\nДопольнительная информация: ${infoForm.value}`);
 
     froma.style.opacity = '0';
     froma.style.zIndex = '0';
