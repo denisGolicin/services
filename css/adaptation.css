@@ -77,6 +77,16 @@
     
 }
 
+@media (max-width: 500px){
+    .wrapper-contacts{
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    .button-contacts:first-child{
+        margin-top: 0;
+    }
+}
+
 @media (max-width: 400px){
     .button-left>img, .button-right>img{
 

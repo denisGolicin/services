@@ -175,7 +175,8 @@ h1{
   }
 }
 
-.main-window, .wrapper-advantages, .wrapper-services, .wrapper-projects, .wrapper-clients{
+.main-window, .wrapper-advantages, .wrapper-services, 
+.wrapper-projects, .wrapper-clients, .wrapper-contacts{
   width: 90%;
   max-width: 700px;
   height: 400px;
@@ -505,6 +506,53 @@ h1{
   height: 80px;
   margin: 0px 10px 10px 10px;
   border-radius: 15px;
+}
+
+.wrapper-contacts{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+
+  flex-wrap: wrap;
+
+  margin-bottom: 20px;
+
+}
+
+.button-contacts{
+  min-width: 250px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 10px 20px 10px 20px;
+  background-color: var(--button-color);
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  box-shadow: 0 0 5px black;
+  opacity: .9;
+  transition: .3s;
+  cursor: pointer;
+
+  font-size: 20px;
+}
+.button-contacts:hover{
+  opacity: 1;
+  transform: scale(1.05);
+}
+.button-contacts>img{
+  width: 40px;
+  height: 40px;
+  margin-right: 30px;
+}
+.wrapper-contacts>p{
+  text-align: center;
+  margin-top: 10px;
 }
 
 footer{
