@@ -1,5 +1,7 @@
 const projectButtonLeft = document.querySelector('.button-left');
 const projectButtonRight = document.querySelector('.button-right');
+const buttonOrder = document.querySelector('.button-request');
+const mainBox = document.getElementsByTagName('main')[0];
 
 let projectItem = [];
 projectItem = document.querySelectorAll('.projects-element');
@@ -58,6 +60,56 @@ projectButtonLeft.addEventListener('click', function(){
 
 });
 
+buttonOrder.addEventListener('click', function(){
+    if(buttonOrder.innerText === "Заказать проект") console.log('Заказать проект');
+    else console.log('Онлайн консультация');
+})
+
 document.addEventListener('DOMContentLoaded', function() {
-    alert("Загрузилось")
+    
+});
+
+let iOS = (navigator.userAgent.match(/(iPad|iPhone|iPod)/i) ? true : false);
+let iOS7 = (navigator.userAgent.match(/(OS 7_0)/i) ? true : false);
+let android = (navigator.userAgent.match(/Android/i) ? true : false);
+
+let buttonMain = document.querySelector('.button-main');
+let textMain = document.querySelector('.main-text-pk');
+
+if(iOS || iOS7 || android){
+    buttonOrder.innerText = "Заказать проект";
+} 
+window.addEventListener('resize', function() {
+    if (window.innerWidth <= 767) {
+        buttonOrder.innerText = "Заказать проект";
+    } else {
+        buttonOrder.innerText = "Онлайн консультация";
+    }
+});
+
+// получаем все ссылки на странице
+const links = document.querySelectorAll('a[href^="#"]');
+const element = document.querySelector('.main-srl');
+
+// добавляем обработчик события клика на каждую ссылку
+links.forEach(link => {
+  link.addEventListener('click', function(event) {
+    // отменяем стандартное поведение ссылки
+    event.preventDefault();
+
+    // получаем id якоря, на который ссылается ссылка
+    const id = this.getAttribute('href').substr(1);
+
+    console.log(id)
+
+    // получаем элемент якоря
+    const target = document.getElementById(id);
+    //===============
+
+    // плавно прокручиваем до элемента якоря
+    element.scrollTo({
+      top: target.offsetTop - 15,
+      behavior: 'smooth'
+    });
+  });
 });
