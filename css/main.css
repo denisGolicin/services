@@ -134,7 +134,7 @@ main{
   align-items: center;
   flex-direction: column;
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: hidden;
   /* scroll-behavior: smooth; */
 
 }
@@ -588,7 +588,7 @@ footer>img, footer>a>img{
   justify-content: center;
   align-items: center;
 
-  background-color: rgba(34, 33, 73, 0.644);
+  background-color: #ffffff70;
 
   opacity: 0;
   transition: 1s;
@@ -617,6 +617,7 @@ footer>img, footer>a>img{
   border-radius: 5px;
   background-color: var(--after-color);
   color: #fff;
+  border: 1px solid #fff;
 }
 .form-box>img{
   max-width: 90%;

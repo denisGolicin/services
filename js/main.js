@@ -86,6 +86,53 @@ projectHeader.addEventListener('click', function(){
 
 });
 
+const sendForm = document.querySelector('#sendForm');
+const nameForm = document.querySelector('.login');
+const contactForm = document.querySelector('.phone');
+const infoForm = document.querySelector('.info');
+let tg = {
+    token: "5458155555:AAFvGNcxewNki4bM5vjUxsbki7TDNcTmY18", 
+    chat_id: "-1001854623307" 
+}
+sendForm.addEventListener('click', function(){
+    if(nameForm.value.length < 5 || nameForm.value.length > 30){
+        invalidInput(nameForm);
+        return false;
+    }
+    if(contactForm.value.length < 5 || contactForm.value.length > 30){
+        invalidInput(contactForm);
+        return false;
+    }
+    sendMessage(`
+    Заявка с сайта It Digital Lab Soft!\n
+    Заказчик: ${nameForm.value}\n
+    Связь с ним: ${contactForm.value}\n
+    Допольнительная информация: ${infoForm.value}
+    `);
+
+    froma.style.opacity = '0';
+    froma.style.zIndex = '0';
+});
+function sendMessage(text)
+{
+    const url = `https://api.telegram.org/bot${tg.token}/sendMessage`; // The url to request
+    const obj = {
+        chat_id: tg.chat_id, // Telegram chat id
+        text: text // The text to send
+    };
+    const xht = new XMLHttpRequest();
+    xht.open("POST", url, true);
+    xht.setRequestHeader("Content-type", "application/json; charset=UTF-8");
+    xht.send(JSON.stringify(obj));
+
+}
+function invalidInput(e){
+    e.style.boxShadow = "0 0 5px red";
+    setTimeout(function(){
+      e.style.boxShadow = "0 0 0px red";
+    }, 1000)
+}
+
 document.addEventListener('DOMContentLoaded', function() {
 
     const element = document.querySelector('.loader');
@@ -115,6 +162,10 @@ function addDelay(){
     requestBlock.style.animationDelay = `${animationBlock.length + 2.5}s`;
     firstTitle.style.animationDelay = `${animationBlock.length + 3.5}s`;
     firstBlock.style.animationDelay = `${animationBlock.length + 4}s`;
+
+    setInterval(function(){
+        mainBox.style.overflowY = "auto";
+    }, 5000);
 }
 
 let iOS = (navigator.userAgent.match(/(iPad|iPhone|iPod)/i) ? true : false);
