@@ -57,3 +57,7 @@ projectButtonLeft.addEventListener('click', function(){
     projectItem[projectid].style.transform = 'translateY(0)';
 
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    alert("Загрузилось")
+});
