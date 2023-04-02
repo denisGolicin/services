@@ -65,12 +65,20 @@ buttonOrder.addEventListener('click', function(){
     else console.log('Онлайн консультация');
 })
 
+imageMain = document.querySelector('#large-header');
+
+imageMain.onload = function() {
+    // Картинка успешно загружена
+    console.log("Картинка загружена");
+}
+
 document.addEventListener('DOMContentLoaded', function() {
 
     const element = document.querySelector('.loader');
 
     setInterval(function(){
         element.style.opacity = '0';
+        addDelay();
 
         setInterval(function(){
             element.style.display = 'none';
@@ -78,6 +86,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
     }, 1000);
 });
+
+let animationBlock = [];
+animationBlock = document.querySelectorAll('.window-message-wrapper');
+const requestBlock = document.querySelector('.box-request');
+
+function addDelay(){
+
+    for(let i = 0; i < animationBlock.length; i++){
+        animationBlock[i].style.animationDelay = `${i + 1}s`;
+    }
+    requestBlock.style.animationDelay = `${animationBlock.length + 1}s`;
+}
 
 let iOS = (navigator.userAgent.match(/(iPad|iPhone|iPod)/i) ? true : false);
 let iOS7 = (navigator.userAgent.match(/(OS 7_0)/i) ? true : false);
