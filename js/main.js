@@ -87,9 +87,9 @@ const requestBlock = document.querySelector('.box-request');
 function addDelay(){
 
     for(let i = 0; i < animationBlock.length; i++){
-        animationBlock[i].style.animationDelay = `${i + 1.7}s`;
+        animationBlock[i].style.animationDelay = `${i + 2.3}s`;
     }
-    requestBlock.style.animationDelay = `${animationBlock.length + 1.5}s`;
+    requestBlock.style.animationDelay = `${animationBlock.length + 2.5}s`;
 }
 
 let iOS = (navigator.userAgent.match(/(iPad|iPhone|iPod)/i) ? true : false);
