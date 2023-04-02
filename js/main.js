@@ -66,7 +66,17 @@ buttonOrder.addEventListener('click', function(){
 })
 
 document.addEventListener('DOMContentLoaded', function() {
-    
+
+    const element = document.querySelector('.loader');
+
+    setInterval(function(){
+        element.style.opacity = '0';
+
+        setInterval(function(){
+            element.style.display = 'none';
+        }, 1000);
+
+    }, 1000);
 });
 
 let iOS = (navigator.userAgent.match(/(iPad|iPhone|iPod)/i) ? true : false);
@@ -100,7 +110,6 @@ links.forEach(link => {
     // получаем id якоря, на который ссылается ссылка
     const id = this.getAttribute('href').substr(1);
 
-    console.log(id)
 
     // получаем элемент якоря
     const target = document.getElementById(id);

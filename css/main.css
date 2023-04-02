@@ -539,7 +539,7 @@ h1{
   opacity: .9;
   transition: .3s;
   cursor: pointer;
-
+  
   font-size: 20px;
 }
 .button-contacts:hover{
