@@ -83,6 +83,8 @@ document.addEventListener('DOMContentLoaded', function() {
 let animationBlock = [];
 animationBlock = document.querySelectorAll('.window-message-wrapper');
 const requestBlock = document.querySelector('.box-request');
+const firstTitle = document.querySelector('#services');
+const firstBlock = document.querySelector('#advantages-element-first');
 
 function addDelay(){
 
@@ -90,6 +92,8 @@ function addDelay(){
         animationBlock[i].style.animationDelay = `${i + 2.3}s`;
     }
     requestBlock.style.animationDelay = `${animationBlock.length + 2.5}s`;
+    firstTitle.style.animationDelay = `${animationBlock.length + 3.5}s`;
+    firstBlock.style.animationDelay = `${animationBlock.length + 4}s`;
 }
 
 let iOS = (navigator.userAgent.match(/(iPad|iPhone|iPod)/i) ? true : false);
