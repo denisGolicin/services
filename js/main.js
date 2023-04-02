@@ -150,7 +150,7 @@ function sendNotification(text){
     notificationText.innerText = text;
     notificationActive = true;
 
-    setInterval(function(){
+    setTimeout(function(){
         notification.style.opacity = '0';
         notification.style.zIndex = '0';
         notificationActive = false;
@@ -167,11 +167,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const element = document.querySelector('.loader');
 
-    setInterval(function(){
+    setTimeout(function(){
         element.style.opacity = '0';
         addDelay();
 
-        setInterval(function(){
+        setTimeout(function(){
             element.style.display = 'none';
         }, 1000);
 
@@ -193,7 +193,7 @@ function addDelay(){
     firstTitle.style.animationDelay = `${animationBlock.length + 3.5}s`;
     firstBlock.style.animationDelay = `${animationBlock.length + 4}s`;
 
-    setInterval(function(){
+    setTimeout(function(){
         mainBox.style.overflowY = "auto";
     }, 5000);
 }
