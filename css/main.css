@@ -89,18 +89,19 @@ header>a>img{
   align-items: center;
 
 }
-.header-nav>p{
+.header-nav>a{
   margin-right: 20px;
   margin-left: 20px;
   font-size: 16px;
 
+  color: #fff;
   cursor: pointer;
   padding-top: 5px;
   padding-bottom: 5px;
   transition: .3s ;
   border-bottom: 1px solid #fffb0000;
 }
-.header-nav>p:hover{
+.header-nav>a:hover{
   border-color: #fffb00;
 }
 .header-button{
@@ -285,7 +286,7 @@ h1{
   color: #fff;
   cursor: pointer;
   transition: .3s;
-  margin-top: 30px;
+  margin-bottom: 30px;
 }
 .button-request:hover{
   transform: scale(1.1);
@@ -591,7 +592,7 @@ footer>img, footer>a>img{
   background-color: #ffffff70;
 
   opacity: 0;
-  transition: 1s;
+  transition: .3s;
 }
 
 .form-box{
@@ -630,6 +631,7 @@ footer>img, footer>a>img{
   background-color: var(--button-color);
   box-shadow: 0 0 5px black;
   border-radius: 5px;
+  cursor: pointer;
 }
 .form-box>div{
   position: relative;
@@ -643,4 +645,22 @@ footer>img, footer>a>img{
   left: 100%;
   transform: translate(-50%, -150%);
   cursor: pointer;
+}
+
+.notification-wrapper{
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff46;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transform: translate(-50%, -50%);
+
+  opacity: 0;
+  transition: .3s;
 }

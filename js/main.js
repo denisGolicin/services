@@ -3,6 +3,8 @@ const projectButtonRight = document.querySelector('.button-right');
 const buttonOrder = document.querySelector('.button-request');
 const mainBox = document.getElementsByTagName('main')[0];
 
+let formActive = false;
+
 let projectItem = [];
 projectItem = document.querySelectorAll('.projects-element');
 console.log(projectItem.length)
@@ -62,6 +64,10 @@ projectButtonLeft.addEventListener('click', function(){
 
 buttonOrder.addEventListener('click', function(){
     if(buttonOrder.innerText === "Заказать проект") {
+        if(formActive){
+            sendNotification("Мы уже обрабатываем Вашу заявку!");
+            return false;
+        }
         froma.style.opacity = '1';
         froma.style.zIndex = '100';
     }
@@ -81,6 +87,10 @@ buttonCloseForm.addEventListener('click', function(){
 
 projectHeader.addEventListener('click', function(){
 
+    if(formActive){
+        sendNotification("Мы уже обрабатываем Вашу заявку!");
+        return false;
+    }
     froma.style.opacity = '1';
     froma.style.zIndex = '100';
 
@@ -90,6 +100,10 @@ const sendForm = document.querySelector('#sendForm');
 const nameForm = document.querySelector('.login');
 const contactForm = document.querySelector('.phone');
 const infoForm = document.querySelector('.info');
+const notification = document.querySelector('.notification-wrapper');
+const notificationText = document.querySelector('#notification-text');
+let notificationActive = false;
+
 let tg = {
     token: "5458155555:AAFvGNcxewNki4bM5vjUxsbki7TDNcTmY18", 
     chat_id: "-1001854623307" 
@@ -107,6 +121,13 @@ sendForm.addEventListener('click', function(){
 
     froma.style.opacity = '0';
     froma.style.zIndex = '0';
+    contactForm.value = "";
+    nameForm.value = "";
+    infoForm.value = "";
+
+    formActive = true;
+
+    sendNotification('Заявка успешно отправлена! Мы скоро с Вами свяжемся!');
 });
 function sendMessage(text)
 {
@@ -120,6 +141,20 @@ function sendMessage(text)
     xht.setRequestHeader("Content-type", "application/json; charset=UTF-8");
     xht.send(JSON.stringify(obj));
 
+}
+function sendNotification(text){
+    if(notificationActive) return false;
+
+    notification.style.opacity = '1';
+    notification.style.zIndex = '110';
+    notificationText.innerText = text;
+    notificationActive = true;
+
+    setInterval(function(){
+        notification.style.opacity = '0';
+        notification.style.zIndex = '0';
+        notificationActive = false;
+    }, 4000);
 }
 function invalidInput(e){
     e.style.boxShadow = "0 0 5px red";
