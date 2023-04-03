@@ -1,4 +1,16 @@
+
 (function() {
+
+    let iOS = (navigator.userAgent.match(/(iPad|iPhone|iPod)/i) ? true : false);
+    let iOS7 = (navigator.userAgent.match(/(OS 7_0)/i) ? true : false);
+    let android = (navigator.userAgent.match(/Android/i) ? true : false);
+    let value = 20;
+
+    if(iOS || iOS7 || android){
+        value = 10;
+    } else {
+        value = 20;
+    }
 
     var width, height, largeHeader, canvas, ctx, points, target, animateHeader = true;
 
@@ -22,11 +34,14 @@
 
         // create points
         points = [];
-        for(var x = 0; x < width; x = x + width/20) {
-            for(var y = 0; y < height; y = y + height/20) {
-                var px = x + Math.random()*width/20;
-                var py = y + Math.random()*height/20;
+        for(var x = 0; x < width; x = x + width/value) {
+            
+            for(var y = 0; y < height; y = y + height/value) {
+                
+                var px = x + Math.random()*width/value;
+                var py = y + Math.random()*height/value;
                 var p = {x: px, originX: px, y: py, originY: py };
+                if(p % 2) continue;
                 points.push(p);
             }
         }
