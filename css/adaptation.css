@@ -18,6 +18,18 @@
         font-size: 12px;
         padding: 5px 10px 5px 10px;
     }
+    .projects-box-info{
+        flex-direction: column;
+    }
+    .projects-box{
+        width: 60%;
+    }
+    .projects-box-info>img{
+        margin-right: 0;
+    }
+    .projects-box-info>p{
+        margin-top: 10px;
+    }
 }
 
 @media (max-width: 767px) {
