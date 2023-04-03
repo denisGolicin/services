@@ -642,7 +642,7 @@ footer>img, footer>a>img{
   border-radius: 5px;
   background-color: var(--after-color);
   color: #fff;
-  border: 1px solid #fff;
+  box-shadow: 0 0 5px black;
 }
 .form-box>img{
   max-width: 90%;
@@ -667,7 +667,7 @@ footer>img, footer>a>img{
   height: 50px;
   top: 0;
   left: 100%;
-  transform: translate(-50%, -150%);
+  transform: translate(-70%, -30%);
   cursor: pointer;
 }
 
