@@ -376,86 +376,23 @@ h1{
   width: 80%;
   height: 400px;
   margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   
 }
 .wrapper-projects-box{
+  max-width: 500px;
   width: 100%;
-  height: 400px;
+  height: 300px;
   
   overflow: hidden;
   position: relative;
+
+  background-color: #ffffff25;
+  border-radius: 5px;
+  box-shadow: 0 0 5px black;
  
-}
-
-.wrapper-projects-box { 
-	display: grid;
-	
-	place-items: center; 
-}
-
-.wrapper-projects-box::before {
-	animation: anim 30s infinite;
-	
-	border-radius: 30% 70% 53% 47% / 26% 46% 54% 74%;
-	
-	content: "";
-	filter:  drop-shadow(0 1px 1px var(--button-color))
-		drop-shadow(1px -1px 1px var(--main-color))
-		drop-shadow(0 0 1px black);
-	height: 90%;
-  max-width: 500px;
-	width: 100%;
-}
-
-@keyframes anim {
-	0%,
-	100% {
-		border-radius: 30% 70% 70% 30% / 30% 52% 48% 70%;
-		box-shadow: 0 -2vmin 4vmin var(--main-color) inset, 0 -4vmin 4vmin var(--main-color) inset,
-			0 -2vmin 7vmin var(--main-color) inset;
-	}
-
-	10% {
-		border-radius: 50% 50% 20% 80% / 25% 80% 20% 75%;
-	}
-
-	20% {
-		border-radius: 67% 33% 47% 53% / 37% 20% 80% 63%;
-	}
-
-	30% {
-		border-radius: 39% 61% 47% 53% / 37% 40% 60% 63%;
-		box-shadow: 0 -4vmin 8vmin var(--main-color) inset, -1vmin -2vmin 6vmin var(--main-color) inset,
-			-1vmin -2vmin 4vmin var(--main-color) inset, 1vmin 4vmin 8vmin var(--main-color) inset;
-	}
-
-	40% {
-		border-radius: 39% 61% 82% 18% / 74% 40% 60% 26%;
-	}
-
-	50% {
-		border-radius: 100%;
-		box-shadow: 0 4vmin 16vmin var(--main-color) inset, 0 2vmin 5vmin var(--main-color) inset, 0 4vmin 4vmin var(--main-color) inset,
-			0 6vmin 8vmin var(--main-color) inset;
-	}
-
-	60% {
-		border-radius: 50% 50% 53% 47% / 72% 69% 31% 28%;
-	}
-
-	70% {
-		border-radius: 50% 50% 53% 47% / 26% 22% 78% 74%;
-		box-shadow: 1vmin 1vmin 8vmin var(--main-color) inset,
-			2vmin -1vmin 4vmin var(--main-color) inset, -1vmin -1vmin 16vmin var(--main-color) inset;
-	}
-
-	80% {
-		border-radius: 50% 50% 53% 47% / 26% 69% 31% 74%;
-	}
-
-	90% {
-		border-radius: 20% 80% 20% 80% / 20% 80% 20% 80%;
-	}
 }
 
 .projects-element{
@@ -480,7 +417,7 @@ h1{
 
 }
 .projects-box{
-  max-width: 300px;
+  max-width: 400px;
   width: 80%;
   height: fit-content;
   background-color: var(--main-color);
@@ -501,11 +438,12 @@ h1{
   display: flex;
   justify-content: center;
   align-items: center;
+
+  flex-direction: column;
 }
 .projects-box-info>img{
-  width: 70px;
-  height: 70px;
-  margin-right: 20px;
+  width: 100px;
+  height: 100px;
   border-radius: 5px;
 }
 .projects-box-info>p{
@@ -513,6 +451,9 @@ h1{
   background-color: #ffffff42;
   border-radius: 5px;
   text-align: center;
+  font-size: 18px;
+  box-shadow: 0 0 5px black;
+  margin-top: 20px;
 }
 .projects-box:hover{
   opacity: 1;
