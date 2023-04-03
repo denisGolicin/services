@@ -159,7 +159,7 @@ function sendNotification(text){
 function invalidInput(e){
     e.style.boxShadow = "0 0 5px red";
     setTimeout(function(){
-      e.style.boxShadow = "0 0 0px red";
+      e.style.boxShadow = "0 0 5px black";
     }, 1000)
 }
 
