@@ -32,8 +32,7 @@
     .wrapper-site, .wrapper-site-description{
         width: 90%;
     }
-    .wrapper-site{
-        order: 1;
+    .wrapper-site-description{
         margin-top: 20px;
     }
     .wrapper-button{
