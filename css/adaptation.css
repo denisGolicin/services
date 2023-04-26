@@ -24,4 +24,43 @@
     .word{
         font-size: 14px;
     }
+    .wrapper-sites{
+        flex-direction: column;
+        align-items: center;
+    
+    }
+    .wrapper-site, .wrapper-site-description{
+        width: 90%;
+    }
+    .wrapper-site{
+        order: 1;
+        margin-top: 20px;
+    }
+    .wrapper-button{
+        justify-content: center;
+    }
+}
+@media (max-width: 571px){
+    .main-window-line{
+        width: 60px;
+        height: 13px;
+    }
+    .main-window-curcle{
+        width: 30px;
+        height: 30px;
+    }
+    .block-box{
+        width: 30px;
+        height: 25px;
+        border-radius: 5px;
+    }
+    .wrapper-text{
+        font-size: 7px;
+    }
+    .header-window-title{
+        font-size: 20px;
+     }
+    .header-window-description{
+        font-size: 13px;
+    }
 }
