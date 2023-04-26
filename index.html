@@ -2,9 +2,8 @@
 <html lang="en">
 <head>
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
-	<link rel="stylesheet" type="text/css" href="css/loader.css">
 	<link rel="stylesheet" type="text/css" href="css/animation.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
 	<link rel="stylesheet" type="text/css" href="css/adaptation.css">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +14,9 @@
 	content="Мы предлагаем профессиональную разработку программного обеспечения, мобильных приложений, телеграм ботов и веб-сайтов. Наша команда разработчиков имеет большой опыт работы и может предложить индивидуальные решения для каждого клиента.">
 
 	<meta name="author" content= "https://denisgolicin.github.io/services/">
-	<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+	
 
 	<link rel="apple-touch-icon" sizes="180x180" href="https://itdilab.ru/themes/digitallab/assets/icons/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="https://itdilab.ru/themes/digitallab/assets/icons/favicon-32x32.png">
@@ -31,399 +32,84 @@
 
 	<meta http-equiv="Permissions-Policy" content="interest-cohort=()"/>
 	
+	
 </head>
 	<body>
-			<div class="loader">
-				<!-- Google Chrome -->
-				<div class="infinityChrome">
-					<div></div>
-					<div></div>
-					<div></div>
-				</div>
-
-				<!-- Safari and others -->
-				<div class="infinity">
-					<div>
-						<span></span>
-					</div>
-					<div>
-						<span></span>
-					</div>
-					<div>
-						<span></span>
-					</div>
-				</div>
-
-				<!-- Stuff -->
-				<svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display: none;">
-					<defs>
-						<filter id="goo">
-							<feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur" />
-							<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
-							<feBlend in="SourceGraphic" in2="goo" />
-						</filter>
-					</defs>
-				</svg>
-
-				<!-- dribbble -->
-				
-			</div>
-
-			<div class="form-wrapper">
-
-				<div class="form-box">
-					<div>
-						<img class="button-close" src="src/images/icons/nav/close.svg" alt="">
-					</div>
-					<p style="margin-bottom: 20px;">Форма заявки</p>
+		<header id="header">
+			<div class="header-wrapper">
+				<div class="header-img">
 					<img src="src/images/logo.png" alt="">
-
-					<input class = "input-text login" type="text" placeholder="Как к Вам обращатся?">
-
-					<input class = "input-text phone" type="text" placeholder="Способ связи с Вами...">
-
-					<input class = "input-text info" type="text" placeholder="Какой проект Вас интересует?">
-
-					<button id="sendForm">Отправить</button>
 				</div>
 
-			</div>
-
-			<div class="notification-wrapper">
-				<div style="opacity: 1;" class="window-message">
-					<div class="message-info">
-						<img style="border-radius: 0;" src="https://itdilab.ru/themes/digitallab/assets/icons/favicon-32x32.png" alt="profile">
-						<p>IT Digital Lab только что:</p>
+				<div class="header-elements">
+					<div class="header-el">
+						<a href="tel:89114842557">+7 (911) 484-25-57</a>
 					</div>
-					<p id="notification-text">Хм... Какая-то ошибка! Уже исправляем!</p>
+					<div class="header-el">
+						<p>Калининград</p>
+					</div>
+					<div class="header-el burger">
+						<img class="menu-burger" src="src/images/icons/burger.svg" alt="menu">
+					</div>
+					<div class="header-el">
+						<p style="color: yellow; font-size: 15px;"><b>Начать проект</b></p>
+					</div>
+					<div class="header-el">
+						<p>Войти</p>
+					</div>
 				</div>
 			</div>
+		</header>
 
-			<script type="text/javascript" src="js/loader.js"></script>
+		<div class="wrapper-descriptor overflow-off">
+			<div id="particles-js"></div>
 
-			<div id="large-header" class="large-header">
-				<canvas id="demo-canvas"></canvas>
-				
-				<div class="wrapper">
-					
-					<header>
-						
-						<a href="tel:89114842557"><img src="src/images/icons/nav/chat.svg" alt=""></a>
-						
-						<div class="header-title">
-							<div class="typing-text">
-								IT Digital Lab Soft Development for&nbsp;<span class="typewriter"></span>
-							</div>
-						</div>
-						<div class="header-nav">
-							<a href="#home">О нас</a>
-							<a href="#services">Услуги</a>
-							<a href="#contacts">Контакты</a>
-							<a href="#package">Кейсы</a>
-							<a href="#clients">Клиенты</a>
-						</div>
-						<div class="header-button">
-							<button id="project-header">Заказать проект</button>
-						</div>
-					</header>
-
-					<main class="main-srl">
-						<div class="title" id="home">
-							<h1>IT Digital Lab Soft - разработка программного обеспечения</h1>
-						</div>
-						<div class="main-window">
-							<div style="animation-delay: 1s;" class="window-message-wrapper message-left">
-								<div class="window-message ">
-									<div class="message-info">
-										<img src="src/images/profile.webp" alt="profile">
-										<p>заказчик сегодня в 13:31:</p>
-									</div>
-									<p>Здравствуйте! С Вашим проектом у нас всё получилось!</p>
-								</div>
-							</div>
-
-							<div style="animation-delay: 1.5s;" class="window-message-wrapper message-right">
-								<div class="window-message">
-									<div class="message-info">
-										<img style="border-radius: 0;" src="https://itdilab.ru/themes/digitallab/assets/icons/favicon-32x32.png" alt="profile">
-										<p>IT Digital Lab сегодня в 13:31:</p>
-									</div>
-									<p>Отлично! Мы очень рады! Всегда готовы помочь!</p>
-								</div>
-							</div>
-
-							<div style="animation-delay: 2s;" class="window-message-wrapper message-left">
-								<div class="window-message">
-									<div class="message-info">
-										<img src="src/images/profile.webp" alt="profile">
-										<p>заказчик сегодня в 14:13:</p>
-									</div>
-									<p>Спасибо! Будем сотрудничать!</p>
-								</div>
-							</div>
-
-						</div>
-						
-
-						<div class="box-request">
-
-							<button class="button-request">Онлайн консультатция</button>
-							<p>Компания IT Digital Lab ценит каждого клиента и стремится предоставить наивысший уровень качества в разработке программного обеспечения. Мы следуем принципу "клиент всегда прав" и всегда готовы выслушать пожелания и требования наших клиентов.</p>
-
-						</div>
-
-						<div class="title-all message-left" id="services">
-							<p>Наши преимущества</p>
-						</div>
-
-						<div class="wrapper-advantages">
-
-							<div class="advantages-element message-right" id="advantages-element-first">
-								<p class="advantages-title">Опыт и квалификация</p>
-								<div>
-									<img src="src/images/icons/experience_1.svg" alt="">
-									<img src="src/images/icons/experience_2.svg" alt="">
-									<img src="src/images/icons/experience_3.svg" alt="">
-								</div>
-								<p class="advantages-text">Команда IT Digital Lab имеет опыт в разработке программного обеспечения на протяжении многих лет. Мы обладаем знаниями и навыками, необходимыми для создания высококачественных программных продуктов, которые соответствуют потребностям наших клиентов.</p>
-							</div>
-
-							<div class="advantages-element">
-								<p class="advantages-title">Комплексный подход</p>
-								<div>
-									<img src="src/images/icons/client.svg" alt="">
-									<img src="src/images/icons/contract.svg" alt="">
-								</div>
-								<p class="advantages-text">Мы работаем с клиентами на всех этапах разработки программного обеспечения, начиная с планирования и заканчивая тестированием и поддержкой. Мы стремимся создать удобные и интуитивно понятные программные продукты, которые помогут нашим клиентам достигать своих бизнес-целей.</p>
-							</div>
-
-							<div class="advantages-element">
-								<p class="advantages-title">Качество и безопасность</p>
-								<div>
-									<img src="src/images/icons/security.svg" alt="">
-									<img src="src/images/icons/padlock.svg" alt="">
-									<img src="src/images/icons/binary_code.svg" alt="">
-								</div>
-								<p class="advantages-text">Мы уделяем большое внимание качеству и безопасности наших программных продуктов. Мы используем передовые технологии и методы разработки, чтобы создавать программы, которые защищены от взломов и ошибок.</p>
-							</div>
-
-							<div class="advantages-element">
-								<p class="advantages-title">Поддержка и обслуживание</p>
-								<div>
-									<img src="src/images/icons/communication.svg" alt="">
-									<img src="src/images/icons/update.svg" alt="">
-								</div>
-								<p class="advantages-text">Мы предлагаем поддержку и обслуживание после разработки программного обеспечения. Мы всегда готовы помочь нашим клиентам решать проблемы и обеспечивать стабильную работу программных продуктов.</p>
-							</div>
-
-							<div class="advantages-element">
-								<p class="advantages-title">Прозрачность и открытость</p>
-								<div>
-									<img src="src/images/icons/cloud.svg" alt="">
-									<img src="src/images/icons/cooperation_1.svg" alt="">
-									<img src="src/images/icons/cooperation_2.svg" alt="">
-								</div>
-								<p class="advantages-text">Мы придерживаемся прозрачности и открытости во всех наших деловых отношениях. Мы уверены, что открытость и честность помогают нам строить долгосрочные отношения с нашими клиентами и создавать программные продукты, которые соответствуют их потребностям.</p>
-							</div>
-
-						</div>
-
-						<div class="title-all">
-							<p>Что мы можем предложить?</p>
-						</div>
-
-						<div class="wrapper-services">
-
-							<div class="services-element">
-								<img src="src/images/icons/desktop.svg" alt="">
-								<p>Создание desktop-приложений для операционных систем Windows, Mac OS и Linux.</p>
-							</div>
-
-							<div class="services-element">
-								<img src="src/images/icons/mobile_app.svg" alt="">
-								<p>Разработка мобильных приложений для Android и iOS с использованием современных технологий и инструментов.</p>
-							</div>
-
-							<div class="services-element">
-								<img src="src/images/icons/server.svg" alt="">
-								<p>Разработка программного обеспечения, включая системы управления базами данных, серверные приложения, облачные решения и другие программные продукты.</p>
-							</div>
-
-							<div class="services-element">
-								<img src="src/images/icons/interactive.svg" alt="">
-								<p>Разработка проектов с интерактивным оборудованием, включая IoT-устройства, системы автоматизации и мониторинга, умный дом и другие решения.</p>
-							</div>
-
-							<div class="services-element">
-								<img src="src/images/icons/web_site.svg" alt="">
-								<p>Создание веб-сайтов любой сложности с использованием современных технологий, а также поддержка и сопровождение уже существующих веб-проектов.</p>
-							</div>
-
-							<div class="services-element">
-								<img src="src/images/icons/bot.svg" alt="">
-								<p>Разработка телеграм-ботов для автоматизации коммуникации с клиентами, оптимизации бизнес-процессов и других задач.</p>
-							</div>
-
-						</div>
-
-						<div class="title-all" id="package">
-							<p>Выполненые проекты</p>
-						</div>
-
-						<div class="wrapper-projects">
-
-							<div class="button-left">
-								<img src = "src/images/icons/arrow.svg" alt="">
-							</div>
-							<div class="button-right">
-								<img style= "transform: rotate(180deg);" src="src/images/icons/arrow.svg" alt="">
-							</div>
-
-							<div class="wrapper-projects-box">
-								
-	
-								<div class="projects-element">
-		
-									<div class="projects-box">
-										<div class="projects-box-info">
-											<img src="https://content2.flowwow-images.com/images/logo/icon/touch-icon-iphone-retina.png" alt="">
-											<p>Flowwow.AR</p>
-										</div>
-										<button>Подробнее</button>
-										
-									</div>
-								</div>
-
-								<div class="projects-element">
-									<div class="projects-box">
-										<div class="projects-box-info">
-											<img src="http://capybara.one/src/img/gopher.jpg" alt="">
-											<p>Capybara</p>
-										</div>
-										<button>Подробнее</button>
-										
-									</div>
-								</div>
-
-								<div class="projects-element">
-
-									<div class="projects-box">
-										<div class="projects-box-info">
-											<img src="https://itdilab.ru/storage/app/uploads/public/615/5b2/b70/6155b2b7094c9528347174.png" alt="">
-											<p>Авангард</p>
-										</div>
-										<button>Подробнее</button>
-										
-									</div>
-								</div>
-
-								<div class="projects-element">
-									<div class="projects-box">
-										<div class="projects-box-info">
-											<img src="https://content.saas-support.com/uploaded/chat_widgets/103364/logo.png?1680362068035" alt="">
-											<p>Лейдинг Video Sfera</p>
-										</div>
-										<button>Подробнее</button>
-										
-									</div>
-								</div>
-
-								<div class="projects-element">
-						
-									<div class="projects-box">
-										<div class="projects-box-info">
-											<img src="https://avatars.mds.yandex.net/i?id=30b565c5175700020a33a3304864cdde-5231845-images-thumbs&n=13" alt="">
-											<p>Parser Soft</p>
-										</div>
-										<button>Подробнее</button>
-										
-									</div>
-								</div>
-								
-							</div>
-
-						</div>
-						
-						<div class="title-all" id="clients">
-							<p>Наши клиенты и партнёры</p>
-						</div>
-
-						<div class="wrapper-clients">
-							<div class="wrapper-clients-elements">
-								<img src="src/images/icons/clients/sberbank.svg" alt="">
-								<img src="src/images/icons/clients/tayota.svg" alt="">
-								<img src="https://content2.flowwow-images.com/images/logo/icon/touch-icon-iphone-retina.png" alt="">
-								<img src="https://itdilab.ru/storage/app/uploads/public/610/a84/f3e/thumb_2255_100_100_0_0_portrait.png" alt="">
-								<img src="https://content.saas-support.com/uploaded/chat_widgets/103364/logo.png?1680362068035" alt="">
-								<img src="https://itdilab.ru/storage/app/uploads/public/5a7/2c9/abb/thumb_87_100_100_0_0_portrait.png" alt="">
-								<img src="https://www.ph4.ru/DL/LOGO/p/pochta___.gif" alt="">
-								<img src="src/images/icons/clients/gosuslugi.svg" alt="">
-								<img src="src/images/icons/clients/tinkoff.svg" alt="">
-							</div>
-						</div>
-
-						<div class="title-all" id="contacts">
-							<p>Связь с нами</p>
-						</div>
-
-						<div class="wrapper-contacts">
-							<a style="color: white;" href="https://wa.me/79114842557" target="_blank">
-								<div class="button-contacts">
-									<img src="src/images/icons/nav/whatsapp.svg" alt="">
-									<p>WhatsApp</p>
-								</div>
-							</a>
-
-							<a style="color: white;" href="" target="_blank">
-								<div class="button-contacts">
-									<img src="src/images/icons/nav/viber.svg" alt="">
-									<p>Viber</p>
-								</div>
-							</a>
-
-							<a style="color: white;" href="https://t.me/FollowReason" target="_blank">
-								<div class="button-contacts">
-									<img src="src/images/icons/nav/telegram.svg" alt="">
-									<p>Telegram</p>
-								</div>
-							</a>
-							
-							<a style="color: white;" href="mailto:info@itdilab.ru">
-								<div class="button-contacts">
-									<img src="src/images/icons/nav/google.svg" alt="">
-									<p>Gmail</p>
-								</div>
-							</a>
-
-							<p><b style="font-size: 20px;">Уважаемые клиенты!</b></p>
-							<p>Компания IT Digital Lab Soft всегда рада новым заказчикам и готова предложить профессиональные услуги в области разработки программного обеспечения, создания мобильных приложений, веб-сайтов, телеграм ботов и проектов с интерактивным оборудованием. Мы готовы приступить к работе над вашими проектами и помочь вам реализовать ваши идеи в лучшем виде. Свяжитесь с нами, и мы с радостью ответим на все ваши вопросы и начнем работу над вашим проектом.</p>
-							<div style="margin-top: 10px;">
-								<p class="info-itdilab">Производство: г. Москва, ул. Верейская 29</p>
-								<p class="info-itdilab">Отдел разработки: г. Калининград, Ленинский 131
-								<p class="info-itdilab">Представительство: Санкт-Петербург</p>
-								<p class="info-itdilab">© 2017-2023. Все права защищены. IT Digital Laboratory</p>
-							</div>
-						</div>
-
-					</main>
-
-					<footer>
-						<a href="#home"><img src="src/images/icons/nav/home.svg" alt=""></a>
-						<a href="#services"><img src="src/images/icons/nav/services.svg" alt=""></a>
-						<a href="#clients"><img src="src/images/icons/nav/avatar.svg" alt=""></a>
-						<a href="#package"><img src="src/images/icons/nav/package.svg" alt=""></a>
-						<a href="#contacts"><img src="src/images/icons/nav/contacts.svg" alt=""></a>
-					</footer>
-
-				</div>
-				
+			<section class="wrapper">
+				<div class="top" id="top">IT Digital Lab</div>
+				<div class="bottom" aria-hidden="true">IT Digital Lab</div>
+			</section>
+			
+			<div class="word-wrapper">
+				<div class="word"></div>
 			</div>
 			
+		</div>
+
+		<div class="wrapper-about overflow-off" id="myElement">
+			<div class="arrow arrow-left"></div>
+			<div class="arrow arrow-right"></div>
 
 
-		<script type="text/javascript" src="js/main.js"></script>
-		<script src='js/plugin/easypack.js'></script>
-		<script src='js/plugin/raf.js'></script>
-		<script src='js/plugin/tweenlite.js'></script><script  src="js/plugin/index.js"></script>
+			<div class="container-descriptor">
+				1
+			</div>
+			<div class="container-descriptor">
+				2
+			</div>
+			<div class="container-descriptor">
+				3
+			</div>
+			<div class="container-descriptor">
+				4
+			</div>
+			<div class="container-descriptor">
+				5
+			</div>
+
+			<div class="container-item-count">
+				<div class="bg-curcle"></div>
+				<div class="item-count-curcle"></div>
+				<div class="item-count-curcle"></div>
+				<div class="item-count-curcle"></div>
+				<div class="item-count-curcle"></div>
+				<div class="item-count-curcle"></div>
+			</div>
+		</div>
+
+
+		<script type="text/javascript" src="js/index.js"></script>
+		<script src='js/plugins/particles/index.js'></script>
+		<script src='js/plugins/text/index.js'></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.0.2/particles.min.js"></script>
 	</body>
 </html>

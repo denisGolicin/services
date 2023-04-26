@@ -1,103 +1,27 @@
-@media (max-width: 1068px) {
-	.header-nav>p{
-        margin-left: 5px;
-        margin-right: 5px;
-    }
-    .header-nav{
-        justify-content: center;
-    }
-}
-@media (max-width: 920px) {
-    .header-nav>p{
-        font-size: 12px;
-    }
-    .typing-text{
-        font-size: 14px;
-    }
-    .header-button>button{
-        font-size: 12px;
-        padding: 5px 10px 5px 10px;
-    }
-    
-}
-
-@media (max-width: 767px) {
-    .header-nav, .header-button{
+@media (max-width: 767px){
+    .header-el{
         display: none;
     }
-    .header-title{
-        width: 100%;
-        
-
+    .burger{
+        display: flex !important;
+        border: 0;
     }
-    .title{
-        margin-top: 10px;
+    .header-img{
+        width: 70%;
     }
-    .main-window{
-        margin-top: 0;
+    .header-elements{
+        width: 30%;
     }
-    .button-request{
-        margin-bottom: 20px;
+    .menu-burger{
+        width: 30px;
     }
-    .header-title{
-        padding: 15px;
+    .wrapper{
+        font-size: clamp(1.5rem, 1rem + 18vw, 3rem);
     }
-    .advantages-element{
-        flex-direction: column;
+    .word-wrapper{
+        left: 50%;
     }
-    .advantages-element>.advantages-text{
-        text-align: center;
-        margin-top: 10px;
+    .word{
+        font-size: 14px;
     }
-    .services-element>p{
-        font-size: 12px;
-    }
-    main{
-        height: calc(100% - 110px);
-    }
-    .projects-box>img{
-        width: 120px;
-    }
-    .projects-box>p{
-        
-        margin-top: 30px;
-        margin-bottom: 30px;
-    }
-    header>a{
-        display: block;
-    }
-    footer{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-   
-    /* .wrapper-clients-elements{
-        animation: clients 10s infinite alternate-reverse;
-    } */
-    
-}
-
-@media (max-width: 500px){
-    .wrapper-contacts{
-        flex-direction: column;
-        flex-wrap: nowrap;
-    }
-    .button-contacts:first-child{
-        margin-top: 0;
-    }
-}
-
-@media (max-width: 400px){
-    .button-left>img, .button-right>img{
-
-        width: 35px;
-        height: 35px;
-    }
-    .button-left, .button-right{
-        transform: translateX(-17.5px) translateY(-50%);
-    }
-    .button-left:hover, .button-right:hover{
-        transform: translateX(-17.5px) translateY(-50%) scale(1.1);
-      }
 }

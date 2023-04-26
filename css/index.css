@@ -1,0 +1,185 @@
+@font-face { 
+  font-family: "MullerLight";
+  src: url("fonts/MullerLight.eot");
+  src: url("fonts/MullerLight.eot?#iefix")format("embedded-opentype"),
+  url("fonts/MullerLight.woff") format("woff"),
+  url("fonts/MullerLight.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 300;
+}
+:root{
+
+}
+
+body, html{
+  width: 100%;
+  height: 100%;
+  font-family: "MullerLight" !important;
+  position: relative;
+}
+
+header{
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  box-shadow: 0 0 5px black;
+  z-index: 2;
+  background-color: #ffffff00;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .3s;
+}
+.header-wrapper{
+  width: 90%;
+  height: 100%;
+
+  display: flex;
+  flex-wrap: nowrap;
+
+}
+.header-img{
+  width: 30%;
+  height: 100%;
+  
+  display: flex;
+  align-items: center;
+}
+.header-img>img{
+  width: 60%;
+}
+
+.header-elements{
+  width: 70%;
+  height: 100%;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  
+}
+
+.header-el:last-child{
+  border: 0;
+}
+.header-el{
+  border-right: 1px solid #ffffff8e;
+
+  padding-right: 10px;
+  padding-left: 10px;
+  height: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+a, .header-el>p{
+  color: #fff;
+}
+
+.menu-burger{
+  width: 20px;
+}
+
+.wrapper-descriptor{
+  width: 100%;
+  height: 100%;
+
+  position: relative;
+  
+
+}
+.overflow-off{
+  overflow-y: hidden;
+}
+
+.container-descriptor{
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  width: 60%;
+  max-width: 600px;
+  height: 60%;
+  max-height: 400px;
+  z-index: 10;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 10px solid #fff;
+  box-shadow: 0 0 5px black;
+  transition: .3s;
+}
+.container-item-count{
+  position: absolute;
+  left: 50%;
+  top: 85%;
+
+  width: 60%;
+  max-width: 300px;
+  height: 10%;
+  max-height: 100px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 10;
+  transform: translate(-50%, -50%);
+}
+.item-count-curcle{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ffffff50;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.bg-curcle{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 10px;
+  height: 10px;
+
+  border-radius: 50%;
+
+  background-color: #fff;
+  transition: .3s;
+  box-shadow: 0 0 5px black;
+  transform: translate(calc(-50% - 60px), -50%);
+}
+.arrow{
+  position: absolute;
+  top: 50%;
+
+  width: 50px;
+  height: 50px;
+  border: 1px solid #fff;
+}
+.arrow-left{
+  left: 0;
+  transform: translateX(50%);
+}
+.arrow-right{
+  left: 100%;
+  transform: translateX(-150%);
+}
+
+.wrapper-about{
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  background: linear-gradient(to right, #31a662 0, #2871b5 100%);
+}
+
