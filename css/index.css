@@ -17,6 +17,36 @@ body, html{
   font-family: "MullerLight" !important;
   position: relative;
 }
+.notification-wrapper{
+  position: fixed;
+  top: 100%;
+  left: 100%;
+  transform: translate(-105%, -115%);
+  z-index: 1000;
+  min-width: 300px;
+  width: fit-content;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px black;
+  background-color: #ebebeb;
+  
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.notification-wrapper>p{
+  margin-left: 20px;
+}
+.accept-notification{
+  margin-top: 10px;
+  padding: 5px 10px 5px 10px;
+
+  border-radius: 5px;
+  background-color: #575757;
+  margin-bottom: 0;
+}
 
 header{
   position: fixed;
@@ -62,6 +92,42 @@ header{
 
 .header-el:last-child{
   border: 0;
+  position: relative;
+}
+.sales{
+  position: absolute;
+  top: 150%;
+  left: -200%;
+
+  width: 150px;
+  padding: 10px;
+  background-color: #fff;
+  text-align: center;
+  box-shadow: 0 0 5px black;
+
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-size: 13px;
+  transform: rotate(-5deg);
+  animation: anim-sales 5s infinite;
+}
+@keyframes anim-sales {
+  30%{
+    transform: rotate(-5deg);
+    top: 150%;
+    left: -200%;
+  }
+  40%{
+    transform: rotate(-19deg);
+    top: 220%;
+    left: -180%;
+  }
+  45%{
+    transform: rotate(-5deg);
+    top: 150%;
+    left: -200%;
+  }
 }
 .header-el{
   border-right: 1px solid #ffffff8e;
@@ -180,6 +246,8 @@ a, .header-el>p{
   padding-bottom: 30px;
   width: 100%;
   background: linear-gradient(to right, #8f31a6 0, #2871b5 100%);
+  box-shadow: 0 0 40px rgba(0, 0, 0, .5) inset;
+  border-bottom: 10px solid #ffffff25;
   overflow-y: hidden;
 
   display: flex;
@@ -311,6 +379,10 @@ a, .header-el>p{
   color: #fff;
   border-bottom: 2px solid yellow;
   padding-bottom: 5px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .5) inset;
+  padding: 10px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
 }
 .wrapper-projects{
   margin-top: 20px;
@@ -320,9 +392,9 @@ a, .header-el>p{
 }
 .wrapper-button{
   width: 90%;
-  margin-top: 20px;
+  margin-top: 30px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 }
 .button-bg{
   width: fit-content;
@@ -381,6 +453,53 @@ a, .header-el>p{
 }
 .project-container:hover .project-name{
   transform: translate(-50%, -100%);
+}
+
+.wrapper-bots{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #8f31a6 0, #2871b5 100%);
+  box-shadow: 0 0 40px rgba(0, 0, 0, .5) inset;
+  border-bottom: 10px solid #ffffff25;
+  overflow: hidden;
+
+}
+.wrapper-bot-gif{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper-bot-gif>img{
+  width: 70%;
+  border-radius: 10px;
+  box-shadow: 0 0 5px black;
+}
+.wrapper-bot-description{
+  width: 50%;
+  height: fit-content;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.bot-icon{
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(-100%, -50%);
+
+  width: 100px;
+}
+.bots-pos{
+  justify-content: flex-start;
 }
 
 .wrapper-about{
