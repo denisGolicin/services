@@ -80,4 +80,7 @@
     .arrow-right{
         transform: translateX(-125%) translateY(-50%);
     }
+    .review-wrapper{
+        width: 95%;
+    }
 }

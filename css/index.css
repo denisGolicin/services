@@ -453,10 +453,12 @@ a, .header-el>p{
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 
   border: 5px solid #ffffff38;
   border-radius: 15px;
   transition: .3s;
+  padding: 30px;
 
   box-shadow: 0 0 40px rgba(0, 0, 0, .5) inset;
 }
@@ -540,6 +542,26 @@ a, .header-el>p{
   color: #fff;
   font-size: 20px;
   text-shadow: 0 0 5px black;
+}
+.review-img{
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+}
+.review-wrapper{
+  width: 60%;
+  background-color: #ffffff50;
+  padding: 15px;
+  border-radius: 10px;
+  color: #252525;
+  font-weight: bold;
+}
+.review-title{
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+  font-size: 24px;
+  color: #fff;
 }
 
 footer{
