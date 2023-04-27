@@ -47,6 +47,11 @@
         transform: translate(-50%, -50%) rotate(-33deg);
     }
 }
+@media (min-height: 700px){
+    .wrapper-about{
+        height: 60%;
+    }
+}
 @media (max-width: 571px){
     .main-window-line{
         width: 60px;
@@ -81,6 +86,22 @@
         transform: translateX(-125%) translateY(-50%);
     }
     .review-wrapper{
-        width: 95%;
+        width: 100%;
     }
+}
+@media (max-width: 500px){
+      .review-img{
+        width: 145px;
+        height: 145px;
+      }
+      .review-wrapper{
+        font-size: 13px;
+      }
+      .review-title{
+
+        font-size: 20px;
+      }
+      .container-descriptor{
+        padding: 20px;
+      }
 }
