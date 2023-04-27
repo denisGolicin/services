@@ -70,4 +70,14 @@
     .header-window-description{
         font-size: 13px;
     }
+    .arrow{
+        width: 40px;
+        height: 40px;
+    }
+    .arrow-left{
+        transform: translateX(25%) translateY(-50%);
+    }
+    .arrow-right{
+        transform: translateX(-125%) translateY(-50%);
+    }
 }
