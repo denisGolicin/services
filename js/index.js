@@ -5,7 +5,7 @@ const containerItemCount = document.querySelector('.container-item-count');
 const arrowLeft = document.querySelector('.arrow-left');
 const arrowRight = document.querySelector('.arrow-right');
 const bgCurcle = document.querySelector('.bg-curcle');
-let curcleMoveFlag = false;
+let curcleMoveFlag = true;
 let curcleMoveCount = 0;
 
 for(let i = 0; i < containerDescriptor.length; i++){
@@ -87,3 +87,57 @@ window.addEventListener('scroll', function() {
         headerBlock.style.background = '#ffffff00';
     }
 });
+// ===================================
+const notification = document.querySelector('.notification-wrapper');
+const notificationText = document.querySelector('#notification-text');
+let notificationFlag = false;
+
+notification.addEventListener('click', function(){
+
+    notificationClose();
+
+});
+notificationShow("Добро пожаловать! <br>Меня зовут Измаил!<br>Я буду Вашим ассистентом!");
+setTimeout(() => {
+    notificationShow("Мы используем файлы куки!");
+}, 10000);
+
+function notificationClose(){
+    if(notificationFlag === false) return;
+
+    notification.style.opacity = '0';
+    setTimeout(() => {
+        notificationFlag = false;
+        notification.style.transform = 'translate(10%, -115%)';
+    }, 300);
+}
+
+function notificationShow(text){
+    if(notificationFlag === true) {
+        notificationClose();
+
+        setTimeout(() => {
+            notification.style.opacity = '1';
+            notificationText.innerHTML = text;
+            notificationFlag = true;
+            setTimeout(() =>{
+                notification.style.transform = 'translate(-105%, -115%)';
+            }, 300);
+        }, 600);
+
+        return;
+    }
+
+
+    notificationFlag = true;
+    setTimeout(() => {
+        notification.style.opacity = '1';
+        notificationText.innerHTML = text;
+        setTimeout(() =>{
+            notification.style.transform = 'translate(-105%, -115%)';
+        }, 300);
+    }, 600);
+
+
+
+}
