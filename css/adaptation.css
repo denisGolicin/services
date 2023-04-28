@@ -64,6 +64,10 @@
         
         align-items: center;
     }
+    .project-name {
+        
+        transform: translate(-50%, -100%);
+    }
 }
 @media (min-height: 700px){
     .wrapper-about{
@@ -112,6 +116,9 @@
         width: 145px;
         height: 145px;
       }
+      .project-name{
+        font-size: 10px;
+      }
       .review-wrapper{
         font-size: 13px;
       }
@@ -125,7 +132,7 @@
 }
 @media (max-width: 390px){
     .project-container {
-        width: 75px;
-        height: 75px;
+        width: 85px;
+        height: 85px;
     }
 }
