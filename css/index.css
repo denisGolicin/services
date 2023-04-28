@@ -600,3 +600,63 @@ footer>img:hover{
 .notification-wrapper>div>p{
   margin-right: 30px;
 }
+::selection {
+  background:#b3b5286c;
+}
+
+::-moz-selection{
+  background:#b3b52865;
+}
+
+.wrapper-mobiles{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: linear-gradient(to right, #8f31a6 0, #2871b5 100%);
+  box-shadow: 0 0 40px rgba(0, 0, 0, .5) inset;
+  border-bottom: 10px solid #ffffff25;
+}
+.mobile-blocks-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 30px;
+}
+.mobile-block{
+  width: 30%;
+  padding: 10px;
+
+  margin-right: 10px;
+  margin-left: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 0 5px black;
+  border-radius: 10px;
+}
+.mobile-title{
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+  display: flex;
+  justify-content: center;
+  max-width: 90%;
+  text-align: center;
+}
+.mobile-logo{
+  width: 90px;
+}
+.name-os{
+  margin-bottom: 30px;
+  font-size: 20px;
+  color: #fff;
+  text-shadow: 0 0 5px black;
+}
+.mobile-description{
+  margin-top: 30px;
+  text-align: center;
+  color: #fff;
+}

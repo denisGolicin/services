@@ -46,10 +46,28 @@
         top: 30%;
         transform: translate(-50%, -50%) rotate(-33deg);
     }
+    .mobile-blocks-wrapper{
+        
+        flex-direction: column;
+    }
+    .mobile-block{
+        width: 90%;
+    }
+    .mobile-margin{
+        margin-top: 30px;
+        margin-bottom: 30px;
+        margin-right: 0;
+         margin-left: 0;
+        
+    }
+    .wrapper-mobiles{
+        
+        align-items: center;
+    }
 }
 @media (min-height: 700px){
     .wrapper-about{
-        height: 70%;
+        height: 75%;
     }
 }
 @media (max-width: 571px){
