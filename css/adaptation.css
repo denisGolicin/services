@@ -123,3 +123,9 @@
         padding: 20px;
       }
 }
+@media (max-width: 390px){
+    .project-container {
+        width: 75px;
+        height: 75px;
+    }
+}
