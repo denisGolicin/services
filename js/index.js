@@ -98,9 +98,14 @@ notification.addEventListener('click', function(){
 
 });
 notificationShow("Добро пожаловать! <br>Меня зовут Измаил!<br>Я буду Вашим ассистентом!");
+
+setTimeout(() => {
+    notificationShow("Нажмите на уведомление<br> и оно закроется!");
+}, 5000);
+
 setTimeout(() => {
     notificationShow("Мы используем файлы куки!");
-}, 10000);
+}, 15000);
 
 function notificationClose(){
     if(notificationFlag === false) return;
