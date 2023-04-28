@@ -5,6 +5,13 @@ const containerItemCount = document.querySelector('.container-item-count');
 const arrowLeft = document.querySelector('.arrow-left');
 const arrowRight = document.querySelector('.arrow-right');
 const bgCurcle = document.querySelector('.bg-curcle');
+
+const burger = document.querySelector('#burger');
+const enterLogin = document.querySelector('#enter-login');
+const startProject = document.querySelector('#start-project');
+const buySite = document.querySelector('#buy-site');
+const buyBot = document.querySelector('#buy-bot');
+
 let curcleMoveFlag = false;
 let curcleMoveCount = 0;
 
@@ -13,6 +20,22 @@ for(let i = 0; i < containerDescriptor.length; i++){
     
     containerDescriptor[i].style.opacity = '0';
 }
+
+burger.addEventListener('click', function(){
+    notificationShow("Меню в разработке!");
+});
+enterLogin.addEventListener('click', function(){
+    notificationShow("Авторизация в разработке!");
+});
+startProject.addEventListener('click', function(){
+    notificationShow("Кнопка в разработке!");
+});
+buySite.addEventListener('click', function(){
+    notificationShow("Кнопка в разработке!");
+});
+buyBot.addEventListener('click', function(){
+    notificationShow("Кнопка в разработке!");
+});
 
 arrowLeft.addEventListener('click', function(){
     if(curcleMoveFlag === true) return;
