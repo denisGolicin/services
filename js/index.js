@@ -5,7 +5,7 @@ const containerItemCount = document.querySelector('.container-item-count');
 const arrowLeft = document.querySelector('.arrow-left');
 const arrowRight = document.querySelector('.arrow-right');
 const bgCurcle = document.querySelector('.bg-curcle');
-let curcleMoveFlag = true;
+let curcleMoveFlag = false;
 let curcleMoveCount = 0;
 
 for(let i = 0; i < containerDescriptor.length; i++){
@@ -17,11 +17,13 @@ for(let i = 0; i < containerDescriptor.length; i++){
 arrowLeft.addEventListener('click', function(){
     if(curcleMoveFlag === true) return;
     curcleMove('left');
+    console.log("left");
 });
 
 arrowRight.addEventListener('click', function(){
     if(curcleMoveFlag === true) return;
     curcleMove('right');
+    console.log("right");
 });
 
 function curcleMove(type){
@@ -142,7 +144,5 @@ function notificationShow(text){
             notification.style.transform = 'translate(-105%, -115%)';
         }, 300);
     }, 600);
-
-
 
 }
