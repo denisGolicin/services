@@ -50,6 +50,9 @@
         
         flex-direction: column;
     }
+    .enter-nav::after{
+        display: block;
+    }
     .mobile-block{
         width: 90%;
     }

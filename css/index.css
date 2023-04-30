@@ -812,9 +812,39 @@ textarea{
   border-left: 3px solid #ffffff80;
   border-right: 3px solid #ffffff80;
   background-color: #00000015;
+  position: relative;
 }
 .nav-item:hover{
   background-color: #ffffff3b;
+}
+.close-button{
+  width: 25px;
+  height: 25px;
+
+  position: absolute;
+  top: 0;
+  left: 100%;
+  transform: translate(calc(-100% - 20px), 20px);
+  cursor: pointer;
+}
+.enter-nav::after{
+  max-width: 170px;
+  content:'Войдите и получите скидку 5%!';
+  position: absolute;
+  top: 80%;
+  left: 30%;
+  color: #000;
+  padding: 10px;
+  font-size: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 5px black;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-size: 13px;
+  transform: rotate(-5deg);
+  display: none;
+
 }
 ::-webkit-input-placeholder {color:#ffffffa8;}
 ::-moz-placeholder          {color:#ffffffa8;}/* Firefox 19+ */

@@ -22,8 +22,15 @@ for(let i = 0; i < containerDescriptor.length; i++){
 }
 windowNav = document.querySelector('.navigation-wrapper');
 burger.addEventListener('click', function(){
-    notificationShow("Меню в разработке!");
+    // notificationShow("Меню в разработке!");
     windowNav.style.height = '100%';
+    document.body.style.overflowY = 'hidden';
+});
+closeNav = document.querySelector('#close-nav');
+closeNav.addEventListener('click', function(){
+    // notificationShow("Меню в разработке!");
+    windowNav.style.height = '0';
+    document.body.style.overflowY = 'auto';
 });
 enterLogin.addEventListener('click', function(){
     notificationShow("Авторизация в разработке!");
