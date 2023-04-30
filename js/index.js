@@ -122,19 +122,15 @@ notification.addEventListener('click', function(){
     notificationClose();
 
 });
-notificationShow("Добро пожаловать! <br>Меня зовут Измаил!<br>Я буду Вашим ассистентом!");
+notificationShow("Привет! Меня зовут IsMail! <br>Я буду Вашим ассистентом!<br>Нажмите на уведомление и оно закроется!");
 
 setTimeout(() => {
-    notificationShow("Нажмите на уведомление<br> и оно закроется!");
+    notificationShow("Я использую Ваши cookie, чтобы<br>Вам было удобнее пользоватся<br>нашим сайтом! <a class='notifiction-link' href='#'>Подробнее</a>");
 }, 5000);
-
-setTimeout(() => {
-    notificationShow("Мы используем файлы куки!");
-}, 15000);
 
 function notificationClose(){
     if(notificationFlag === false) return;
-
+    document.body.style.overflowY = 'auto';
     notification.style.opacity = '0';
     setTimeout(() => {
         notificationFlag = false;
@@ -145,14 +141,17 @@ function notificationClose(){
 function notificationShow(text){
     if(notificationFlag === true) {
         notificationClose();
-
+        
+        document.body.style.overflowY = 'hidden';
         setTimeout(() => {
             notification.style.opacity = '1';
             notificationText.innerHTML = text;
             notificationFlag = true;
-            setTimeout(() =>{
-                notification.style.transform = 'translate(-105%, -115%)';
-            }, 300);
+            notification.style.transform = 'translate(-105%, -115%)';
+            // setTimeout(() =>{
+                
+                
+            // }, 300);
         }, 600);
 
         return;
@@ -160,12 +159,14 @@ function notificationShow(text){
 
 
     notificationFlag = true;
+    document.body.style.overflowY = 'hidden';
     setTimeout(() => {
         notification.style.opacity = '1';
         notificationText.innerHTML = text;
-        setTimeout(() =>{
-            notification.style.transform = 'translate(-105%, -115%)';
-        }, 300);
+        notification.style.transform = 'translate(-105%, -115%)';
+        // setTimeout(() =>{
+            
+        // }, 300);
     }, 600);
 
 }

@@ -68,6 +68,16 @@
         
         transform: translate(-50%, -100%);
     }
+    .mobile-title{
+        width: 90%;
+    }
+    .img-bot{
+        width: 35px;
+      }
+      
+      .shadow-box>div>p{
+        font-size: 10px;
+      }
 }
 @media (min-height: 700px){
     .wrapper-about{

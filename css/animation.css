@@ -33,6 +33,10 @@
   color: #fff;
   transition: transform .1s ease-out;
   white-space: nowrap;
+
+  background: linear-gradient(to right, #2871b5, #8f31a6 100%);
+  box-shadow: 0 0 40px rgb(0 0 0 / 50%) inset;
+  border: 2px solid #ffffff86;
 }
 
 

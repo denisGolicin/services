@@ -5,7 +5,7 @@ var words = ['Создание сайтов', 'Разработка мобиль
     len = words.length,
     forwards = true,
     skip_count = 0,
-    skip_delay = 50,
+    skip_delay = 150,
     speed = 30;
 var wordflick = function () {
   setInterval(function () {
