@@ -624,6 +624,8 @@ footer>img:hover{
 }
 .notifiction-link{
   border-bottom: 1px solid #fff;
+  padding: 5px;
+  padding-bottom: 0;
 }
 ::selection {
   background:#b3b5286c;

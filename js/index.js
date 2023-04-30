@@ -130,11 +130,11 @@ notification.addEventListener('click', function(){
     notificationClose();
 
 });
-// notificationShow("Привет! Меня зовут IsMail! <br>Я буду Вашим ассистентом!<br>Нажмите на уведомление и оно закроется!");
+notificationShow("Привет! Меня зовут IsMail! <br>Я буду Вашим ассистентом!<br>Нажмите на уведомление и оно закроется!");
 
-// setTimeout(() => {
-//     notificationShow("Я использую Ваши cookie, чтобы<br>Вам было удобнее пользоватся<br>нашим сайтом! <a class='notifiction-link' href='#'>Подробнее</a>");
-// }, 5000);
+setTimeout(() => {
+    notificationShow("Я использую Ваши cookie, чтобы<br>Вам было удобнее пользоватся<br>нашим сайтом! <a class='notifiction-link' href='#'>Подробнее</a>");
+}, 5000);
 
 function notificationClose(){
     if(notificationFlag === false) return;
