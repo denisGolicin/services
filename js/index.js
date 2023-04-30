@@ -25,12 +25,14 @@ burger.addEventListener('click', function(){
     // notificationShow("Меню в разработке!");
     windowNav.style.height = '100%';
     document.body.style.overflowY = 'hidden';
+    closeNav.style.display = 'block';
 });
 closeNav = document.querySelector('#close-nav');
 closeNav.addEventListener('click', function(){
     // notificationShow("Меню в разработке!");
     windowNav.style.height = '0';
     document.body.style.overflowY = 'auto';
+    closeNav.style.display = 'none';
 });
 enterLogin.addEventListener('click', function(){
     notificationShow("Авторизация в разработке!");
