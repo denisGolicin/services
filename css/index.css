@@ -579,7 +579,7 @@ footer>img:hover{
   top: 80px;
   left: 10px;
 
-  transform: translate(0, 0);
+  transform: translate(-500px, 0);
   z-index: 1000;
   width: fit-content;
   border-radius: 10px;
