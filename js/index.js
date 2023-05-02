@@ -132,7 +132,7 @@ notification.addEventListener('click', function(){
     notificationClose();
 
 });
-notificationShow("Привет! Меня зовут IsMail! <br>Я буду Вашим ассистентом!<br>Нажмите на уведомление и оно закроется!");
+notificationShow("Привет! Меня зовут Фектс! <br>Я буду Вашим ассистентом!<br>Нажмите на уведомление и оно закроется!");
 
 setTimeout(() => {
     notificationShow("Я использую Ваши cookie, чтобы<br>Вам было удобнее пользоватся<br>нашим сайтом! <a class='notifiction-link' href='#'>Подробнее</a>");
@@ -140,11 +140,10 @@ setTimeout(() => {
 
 function notificationClose(){
     if(notificationFlag === false) return;
-    document.body.style.overflowY = 'auto';
     notification.style.opacity = '0';
     setTimeout(() => {
         notificationFlag = false;
-        notification.style.transform = 'translate(10%, -115%)';
+        notification.style.transform = 'translate(-500px, 0)';
     }, 300);
 }
 
@@ -152,12 +151,11 @@ function notificationShow(text){
     if(notificationFlag === true) {
         notificationClose();
         
-        document.body.style.overflowY = 'hidden';
         setTimeout(() => {
             notification.style.opacity = '1';
             notificationText.innerHTML = text;
             notificationFlag = true;
-            notification.style.transform = 'translate(-105%, -115%)';
+            notification.style.transform = 'translate(0, 0)';
             // setTimeout(() =>{
                 
                 
@@ -169,11 +167,10 @@ function notificationShow(text){
 
 
     notificationFlag = true;
-    document.body.style.overflowY = 'hidden';
     setTimeout(() => {
         notification.style.opacity = '1';
         notificationText.innerHTML = text;
-        notification.style.transform = 'translate(-105%, -115%)';
+        notification.style.transform = 'translate(0, 0)';
         // setTimeout(() =>{
             
         // }, 300);

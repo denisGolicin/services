@@ -576,9 +576,10 @@ footer>img:hover{
 }
 .notification-wrapper{
   position: fixed;
-  top: 100%;
-  left: 100%;
-  transform: translate(10%, -115%);
+  top: 80px;
+  left: 10px;
+
+  transform: translate(0, 0);
   z-index: 1000;
   width: fit-content;
   border-radius: 10px;
@@ -611,7 +612,7 @@ footer>img:hover{
   margin-left: 5px;
 }
 .notification-wrapper:hover{
-  transform: translate(-105%, -115%) scale(1.01) !important;
+  transform: translate(0, 0) scale(1.01) !important;
 }
 .shadow-box>div{
   display: flex; justify-content: center; align-items: center;
@@ -769,18 +770,26 @@ textarea{
   flex-direction: column;
   transform: translateY(-35px);
 }
-.user-info{
+.user-info-shadow{
   width: 80%;
   max-width: 300px;
-  display: flex;
-  align-items: center;
-  margin-bottom: 50px;
-  background-color: #2871b5;
+  box-shadow: 0 0 5px black;
   border-radius: 5px;
   border-top-left-radius: 50%;
   border-bottom-left-radius: 50%;
-  box-shadow: 0 0 5px black;
+}
+.user-info{
   
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to right, #8f31a6ea 0, #2871b5ea 100%);
+  box-shadow: 0 0 40px rgba(0, 0, 0, .5) inset;
+  border-radius: 5px;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border: 2px solid #ffffff80;
+
 }
 .user-info>img{
   width: 75px;
@@ -788,6 +797,7 @@ textarea{
   border-radius: 50%;
   margin-right: 20px;
   box-shadow: 0 0 5px black;
+  transform: translateX(-3px);
   
 }
 .user-info>p{
