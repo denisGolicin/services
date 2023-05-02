@@ -20,12 +20,18 @@ for(let i = 0; i < containerDescriptor.length; i++){
     
     containerDescriptor[i].style.opacity = '0';
 }
+
+let activeWindow = 0;
 windowNav = document.querySelector('.navigation-wrapper');
 burger.addEventListener('click', function(){
+    if(activeWindow != 0){
+        activeWindow.style.height = '0';
+    }
     // notificationShow("Меню в разработке!");
     windowNav.style.height = '100%';
     document.body.style.overflowY = 'hidden';
     closeNav.style.display = 'block';
+    activeWindow = windowNav;
 });
 closeNav = document.querySelector('#close-nav');
 closeNav.addEventListener('click', function(){
@@ -34,6 +40,19 @@ closeNav.addEventListener('click', function(){
     document.body.style.overflowY = 'auto';
     closeNav.style.display = 'none';
 });
+
+closeForm = document.querySelector('#close-form');
+windowForm = document.querySelector('.wrapper-request-form');
+closeForm.addEventListener('click', function(){
+    if(activeWindow != 0){
+        activeWindow.style.height = '0';
+    }
+    // notificationShow("Меню в разработке!");
+    windowForm.style.height = '0';
+    document.body.style.overflowY = 'auto';
+    closeForm.style.display = 'none';
+    activeWindow = windowForm;
+});
 enterLogin.addEventListener('click', function(){
     notificationShow("Авторизация в разработке!");
 });
@@ -41,7 +60,15 @@ startProject.addEventListener('click', function(){
     notificationShow("Кнопка в разработке!");
 });
 buySite.addEventListener('click', function(){
-    notificationShow("Кнопка в разработке!");
+    //notificationShow("Кнопка в разработке!");
+    if(activeWindow != 0){
+        activeWindow.style.height = '0';
+    }
+    // notificationShow("Меню в разработке!");
+    windowForm.style.height = '100%';
+    document.body.style.overflowY = 'hidden';
+    closeForm.style.display = 'block';
+    activeWindow = windowForm;
 });
 buyBot.addEventListener('click', function(){
     notificationShow("Кнопка в разработке!");
