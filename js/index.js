@@ -236,34 +236,31 @@ buttonAuth.addEventListener('click', function(){
 //=======================
 buttonForm = document.querySelector('#button-form');
 buttonForm.addEventListener('click', function(){
-    let name;
-    let phone;
+    let name = document.querySelector('#name');
+    let phone = document.querySelector('#phone');
     let info = document.querySelector('#info');
-
+    const formData = new FormData();
     if (document.cookie.indexOf('auth=1') !== -1){
-        name = document.querySelector('#name');
-        phone = document.querySelector('#phone');
+        formData.append('name', getCookie('name'));
+        formData.append('phone', getCookie('phone'));
     } else {
-        name.value = getCookie('name');
-        phone.value = getCookie('phone');
+
+        if(name.value.length < 5){
+            notificationShow("Некорректное имя!");
+            return;
+        }
+        if(!isValidPhoneNumber(phone.value)){
+            notificationShow("Некорректный телефон!");
+            return;
+        }
+        formData.append('name', name.value);
+        formData.append('phone', phone.value);
     }
 
-    if(name.value.length < 5){
-        notificationShow("Некорректное имя!");
-        return;
-    }
-    if(!isValidPhoneNumber(phone.value)){
-        notificationShow("Некорректный телефон!");
-        return;
-    }
     if(info.value.length < 20){
         notificationShow("Введите описание проекта!");
         return;
     }
-
-    const formData = new FormData();
-    formData.append('name', name.value);
-    formData.append('phone', phone.value);
     formData.append('info', info.value);
     notificationShow("Отправляю заявку...");
     buttonForm.style.cursor = 'no-drop';
