@@ -17,7 +17,6 @@ let curcleMoveCount = 0;
 
 if (document.cookie.indexOf('auth=1') !== -1){
     notificationShow('Вы уже авторизованны!');
-    return;
 }
 
 for(let i = 0; i < containerDescriptor.length; i++){
