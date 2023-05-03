@@ -12,6 +12,8 @@ const startProject = document.querySelector('#start-project');
 const buySite = document.querySelector('#buy-site');
 const buyBot = document.querySelector('#buy-bot');
 
+let notificationFlag = false;
+
 let curcleMoveFlag = false;
 let curcleMoveCount = 0;
 
@@ -315,7 +317,6 @@ window.addEventListener('scroll', function() {
 // ===================================
 const notification = document.querySelector('.notification-wrapper');
 const notificationText = document.querySelector('#notification-text');
-let notificationFlag = false;
 
 notification.addEventListener('click', function(){
 
