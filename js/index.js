@@ -16,9 +16,21 @@ let notificationFlag = false;
 
 let curcleMoveFlag = false;
 let curcleMoveCount = 0;
-
+const saleBlock = document.querySelector('.sales');
+const loginName = document.querySelector('#login-name');
+const userName = document.querySelector('#name-user');
 if (document.cookie.indexOf('auth=1') !== -1){
-    notificationShow('Вы уже авторизованны!'); // что
+    saleBlock.style.display = 'none';
+    loginName.innerHTML = getCookie('name');
+    userName.innerHTML = getCookie('name');
+    //notificationShow('Вы уже авторизованны!'); // что
+
+} else {
+    notificationShow("Привет! Меня зовут Фектс! <br>Я буду Вашим ассистентом!<br>Нажмите на уведомление и оно закроется!");
+
+    setTimeout(() => {
+        notificationShow("Я использую Ваши cookie, чтобы<br>Вам было удобнее пользоватся<br>нашим сайтом! <a class='notifiction-link' href='#'>Подробнее</a>");
+    }, 5000);
 }
 
 for(let i = 0; i < containerDescriptor.length; i++){
@@ -320,11 +332,6 @@ notification.addEventListener('click', function(){
     notificationClose();
 
 });
-notificationShow("Привет! Меня зовут Фектс! <br>Я буду Вашим ассистентом!<br>Нажмите на уведомление и оно закроется!");
-
-setTimeout(() => {
-    notificationShow("Я использую Ваши cookie, чтобы<br>Вам было удобнее пользоватся<br>нашим сайтом! <a class='notifiction-link' href='#'>Подробнее</a>");
-}, 5000);
 
 function notificationClose(){
     if(notificationFlag === false) return;
