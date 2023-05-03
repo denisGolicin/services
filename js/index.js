@@ -54,7 +54,23 @@ closeForm.addEventListener('click', function(){
     activeWindow = windowForm;
 });
 enterLogin.addEventListener('click', function(){
-    notificationShow("Авторизация в разработке!");
+    if (document.cookie.indexOf('auth=1')){
+        notificationShow("Вы уже авторизованны!");
+        return;
+    }
+    notificationShow("Авторизируйтесь и получите скидку!<br>Вы получите доступ к общему чату!");
+    windowForm.style.height = '100%';
+    document.body.style.overflowY = 'hidden';
+    closeForm.style.display = 'block';
+    activeWindow = windowForm;
+
+    document.querySelector('#info').style.display = 'none';
+
+    let title = document.querySelector('.form-title');
+    title.innerHTML = 'Авторизация';
+    buttonAuth.style.display = 'block';
+    buttonForm.style.display = 'none';
+
 });
 startProject.addEventListener('click', function(){
     notificationShow("Кнопка в разработке!");
@@ -69,6 +85,15 @@ buySite.addEventListener('click', function(){
     document.body.style.overflowY = 'hidden';
     closeForm.style.display = 'block';
     activeWindow = windowForm;
+
+    let name = document.querySelector('#name');
+    let info = document.querySelector('#info');
+    let title = document.querySelector('.form-title');
+
+    info.style.display = 'block';
+    buttonAuth.style.display = 'none';
+    buttonForm.style.display = 'block';
+    title.innerHTML = 'Новая заявка';
 });
 buyBot.addEventListener('click', function(){
     notificationShow("Кнопка в разработке!");
@@ -135,6 +160,135 @@ function curcleMove(type){
     }, 500)
 }
 
+//=======================
+buttonAuth = document.querySelector('#button-auth');
+buttonAuth.addEventListener('click', function(){
+    if (document.cookie.indexOf('auth=1')){
+        notificationShow('Вы уже авторизованны!');
+        return;
+    }
+    let name = document.querySelector('#name');
+    let phone = document.querySelector('#phone');
+
+    if(name.value.length < 5){
+        notificationShow("Некорректное имя!");
+        return;
+    }
+    if(!isValidPhoneNumber(phone.value)){
+        notificationShow("Некорректный телефон!");
+        return;
+    }
+
+    buttonAuth.style.cursor = 'no-drop';
+    buttonAuth.style.opacity = '.5';
+    notificationShow("Авторизация...");
+
+    const formData = new FormData();
+    formData.append('name', name.value);
+    formData.append('phone', phone.value);
+    
+
+    fetch(`http://192.168.43.171/auth/`, {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => {
+        console.log(response.text());
+        notificationShow("Отлично!<br>Вы авторизовались!");
+
+        buttonAuth.style.cursor = 'pointer';
+        buttonAuth.style.opacity = '1';
+        windowForm.style.height = '0';
+        document.body.style.overflowY = 'auto';
+        closeForm.style.display = 'none';
+        activeWindow = windowForm;
+
+        const now = new Date();
+        const expirationDate = new Date(now.getTime() + 30 * 24 * 60 * 60 * 1000);
+
+        document.cookie = `auth=1; expires=${expirationDate.toUTCString()}; path=/`;
+        document.cookie = `name=${name.value}; expires=${expirationDate.toUTCString()}; path=/`;
+        document.cookie = `phone=${phone.value}; expires=${expirationDate.toUTCString()}; path=/`;
+
+        name.value = '';
+        phone.value = '';
+    })
+    .catch(error => {
+        notificationShow("Извините!<br>Технические неполадки на сервере!");
+        buttonAuth.style.cursor = 'pointer';
+        buttonAuth.style.opacity = '1';
+
+        name.value = '';
+        phone.value = '';
+    });
+})
+//=======================
+buttonForm = document.querySelector('#button-form');
+buttonForm.addEventListener('click', function(){
+    let name;
+    let phone;
+    let info = document.querySelector('#info');
+
+    if (document.cookie.indexOf('auth=1')){
+        name = document.querySelector('#name');
+        phone = document.querySelector('#phone');
+    } else {
+        name.value = getCookie('name');
+        phone.value = getCookie('phone');
+    }
+
+    if(name.value.length < 5){
+        notificationShow("Некорректное имя!");
+        return;
+    }
+    if(!isValidPhoneNumber(phone.value)){
+        notificationShow("Некорректный телефон!");
+        return;
+    }
+    if(info.value.length < 20){
+        notificationShow("Введите описание проекта!");
+        return;
+    }
+
+    const formData = new FormData();
+    formData.append('name', name.value);
+    formData.append('phone', phone.value);
+    formData.append('info', info.value);
+    notificationShow("Отправляю заявку...");
+    buttonForm.style.cursor = 'no-drop';
+    buttonForm.style.opacity = '.5';
+    
+
+    fetch(`http://192.168.43.171/requests/`, {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => {
+        console.log(response.text());
+        notificationShow("Отлично!<br>Мы уже обрабатываем Вашу заявку!<br>Наш менеджер скоро свяжется с Вами!");
+
+        buttonForm.style.cursor = 'pointer';
+        buttonForm.style.opacity = '1';
+        windowForm.style.height = '0';
+        document.body.style.overflowY = 'auto';
+        closeForm.style.display = 'none';
+        activeWindow = windowForm;
+
+        name.value = '';
+        phone.value = '';
+        info.value = '';
+    })
+    .catch(error => {
+        notificationShow("Извините!<br>Технические неполадки на сервере!");
+        buttonForm.style.cursor = 'pointer';
+        buttonForm.style.opacity = '1';
+
+        name.value = '';
+        phone.value = '';
+        info.value = '';
+    });
+
+});
 //=======================
 const block = document.getElementById('myElement');
 const headerBlock = document.getElementById('header')
@@ -203,4 +357,42 @@ function notificationShow(text){
         // }, 300);
     }, 600);
 
+}
+sendAPI();
+function sendAPI(){
+    const xhr = new XMLHttpRequest();
+    const url = 'http://192.168.43.171';
+    xhr.open('GET', `${url}`);
+    xhr.onload = function () {
+        if (xhr.status === 200) {
+            //const response = JSON.parse(xhr.responseText);
+            // if (response.error) {
+            //     console.log(`Ошибка авторизации: ${response.error}`);
+            // } else {
+                
+                
+            // }
+            console.log(xhr.responseText)
+        } 
+        else {
+            console.log(response)
+        }
+        //closeLoadWindow();
+    };  
+    xhr.send();
+}
+function isValidPhoneNumber(phoneNumber) {
+    let regex = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
+    return regex.test(phoneNumber);
+}
+function getCookie(name){
+    const cookies = document.cookie.split("; "); 
+    for (let i = 0; i < cookies.length; i++) {
+    const cookie = cookies[i].split("="); 
+        if (cookie[0] === name) {
+            return cookie[1];
+        }
+    }
+
+    return 'null';
 }

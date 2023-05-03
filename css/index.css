@@ -747,6 +747,7 @@ textarea{
   background-color:#2871b5;
   box-shadow: 0 0 5px black;
   border-radius: 5px;
+  cursor: pointer;
 }
 .navigation-wrapper{
   width: 100%;
