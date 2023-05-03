@@ -235,6 +235,9 @@ buttonAuth.addEventListener('click', function(){
 
         name.value = '';
         phone.value = '';
+        saleBlock.style.display = 'none';
+        loginName.innerHTML = getCookie('name');
+        userName.innerHTML = getCookie('name');
     })
     .catch(error => {
         notificationShow("Извините!<br>Технические неполадки на сервере!");
@@ -375,7 +378,7 @@ function notificationShow(text){
 sendAPI();
 function sendAPI(){
     const xhr = new XMLHttpRequest();
-    const url = 'https://api.soft';
+    const url = 'https://api.soft/';
     xhr.open('GET', `${url}`);
     xhr.onload = function () {
         if (xhr.status === 200) {
