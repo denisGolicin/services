@@ -54,7 +54,7 @@ closeForm.addEventListener('click', function(){
     activeWindow = windowForm;
 });
 enterLogin.addEventListener('click', function(){
-    if (document.cookie.indexOf('auth=1')){
+    if (document.cookie.indexOf('auth=1') !== -1){
         notificationShow("Вы уже авторизованны!");
         return;
     }
@@ -89,6 +89,11 @@ buySite.addEventListener('click', function(){
     let name = document.querySelector('#name');
     let info = document.querySelector('#info');
     let title = document.querySelector('.form-title');
+
+    if (document.cookie.indexOf('auth=1') !== -1){
+        name.style.display = 'none';
+        phone.style.display = 'none';
+    }
 
     info.style.display = 'block';
     buttonAuth.style.display = 'none';
@@ -163,7 +168,7 @@ function curcleMove(type){
 //=======================
 buttonAuth = document.querySelector('#button-auth');
 buttonAuth.addEventListener('click', function(){
-    if (document.cookie.indexOf('auth=1')){
+    if (document.cookie.indexOf('auth=1') !== -1){
         notificationShow('Вы уже авторизованны!');
         return;
     }
@@ -229,7 +234,7 @@ buttonForm.addEventListener('click', function(){
     let phone;
     let info = document.querySelector('#info');
 
-    if (document.cookie.indexOf('auth=1')){
+    if (document.cookie.indexOf('auth=1') !== -1){
         name = document.querySelector('#name');
         phone = document.querySelector('#phone');
     } else {
