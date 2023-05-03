@@ -15,6 +15,11 @@ const buyBot = document.querySelector('#buy-bot');
 let curcleMoveFlag = false;
 let curcleMoveCount = 0;
 
+if (document.cookie.indexOf('auth=1') !== -1){
+    notificationShow('Вы уже авторизованны!');
+    return;
+}
+
 for(let i = 0; i < containerDescriptor.length; i++){
     if(i === 0) { continue; }
     
@@ -193,7 +198,7 @@ buttonAuth.addEventListener('click', function(){
     formData.append('phone', phone.value);
     
 
-    fetch(`http://192.168.43.171/auth/`, {
+    fetch(`https://192.168.2.4/auth/`, {
         method: 'POST',
         body: formData
     })
@@ -264,7 +269,7 @@ buttonForm.addEventListener('click', function(){
     buttonForm.style.opacity = '.5';
     
 
-    fetch(`http://192.168.43.171/requests/`, {
+    fetch(`https://192.168.2.4/requests/`, {
         method: 'POST',
         body: formData
     })
@@ -366,7 +371,7 @@ function notificationShow(text){
 sendAPI();
 function sendAPI(){
     const xhr = new XMLHttpRequest();
-    const url = 'http://192.168.43.171';
+    const url = 'https://192.168.2.4';
     xhr.open('GET', `${url}`);
     xhr.onload = function () {
         if (xhr.status === 200) {
