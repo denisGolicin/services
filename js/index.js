@@ -199,7 +199,7 @@ buttonAuth.addEventListener('click', function(){
     formData.append('phone', phone.value);
     
 
-    fetch(`https://api.soft/auth/`, {
+    fetch(`https://192.168.2.4/auth/`, {
         method: 'POST',
         body: formData
     })
@@ -267,7 +267,7 @@ buttonForm.addEventListener('click', function(){
     buttonForm.style.opacity = '.5';
     
 
-    fetch(`https://api.soft/requests/`, {
+    fetch(`https://192.168.2.4/requests/`, {
         method: 'POST',
         body: formData
     })
@@ -368,7 +368,7 @@ function notificationShow(text){
 sendAPI();
 function sendAPI(){
     const xhr = new XMLHttpRequest();
-    const url = 'https://api.soft';
+    const url = 'https://192.168.2.4';
     xhr.open('GET', `${url}`);
     xhr.onload = function () {
         if (xhr.status === 200) {
