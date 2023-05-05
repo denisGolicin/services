@@ -1,3 +1,4 @@
+const host = 'https://cw38660.tw1.ru/';
 let containerDescriptor = [];
 containerDescriptor = document.querySelectorAll('.container-descriptor');
 const containerItemCount = document.querySelector('.container-item-count');
@@ -19,11 +20,13 @@ let curcleMoveCount = 0;
 const saleBlock = document.querySelector('.sales');
 const loginName = document.querySelector('#login-name');
 const userName = document.querySelector('#name-user');
+
 if (document.cookie.indexOf('auth=1') !== -1){
     saleBlock.style.display = 'none';
-    loginName.innerHTML = getCookie('name');
-    userName.innerHTML = getCookie('name');
-    //notificationShow('Вы уже авторизованны!'); // что
+    const n = getCookie('name');
+    loginName.innerHTML = n;
+    userName.innerHTML = n;
+    notificationShow(`Здравствуйте, ${n}!<br>Ради снова Вас видеть!`); // что
 
 } else {
     notificationShow("Привет! Меня зовут Фектс! <br>Я буду Вашим ассистентом!<br>Нажмите на уведомление и оно закроется!");
@@ -211,7 +214,7 @@ buttonAuth.addEventListener('click', function(){
     formData.append('phone', phone.value);
     
 
-    fetch(`https://api.soft/auth/`, {
+    fetch(`${host}auth/`, {
         method: 'POST',
         body: formData
     })
@@ -282,7 +285,7 @@ buttonForm.addEventListener('click', function(){
     buttonForm.style.opacity = '.5';
     
 
-    fetch(`https://api.soft/requests/`, {
+    fetch(`${host}requests/`, {
         method: 'POST',
         body: formData
     })
@@ -378,7 +381,7 @@ function notificationShow(text){
 sendAPI();
 function sendAPI(){
     const xhr = new XMLHttpRequest();
-    const url = 'https://api.soft/';
+    const url = host;
     xhr.open('GET', `${url}`);
     xhr.onload = function () {
         if (xhr.status === 200) {
