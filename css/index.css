@@ -879,6 +879,31 @@ textarea{
   border-radius: 10px;
   box-shadow: 0 0 5px black;
 }
+.description-job{
+  margin-top: 20px;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+}
+.job-element{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.job-element:first-child{
+  margin-top: 0;
+}
+.job-element>img{
+  width: 50px;
+}
+.job-element>p{
+  color: #fff;
+  text-shadow: 0 0 5px black;
+  margin-left: 20px;
+}
 ::-webkit-input-placeholder {color:#ffffffa8;}
 ::-moz-placeholder          {color:#ffffffa8;}/* Firefox 19+ */
 :-moz-placeholder           {color:#ffffffa8;}/* Firefox 18- */
