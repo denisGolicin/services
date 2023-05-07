@@ -873,7 +873,7 @@ textarea{
 
 }
 .modelviewer{
-  width: 100%;
+  width: 85%;
   height: 350px;
   border: 1px solid #fff;
   border-radius: 10px;
@@ -903,6 +903,10 @@ textarea{
   color: #fff;
   text-shadow: 0 0 5px black;
   margin-left: 20px;
+}
+.ar-title-m{
+  width: 90%;
+  display: none;
 }
 ::-webkit-input-placeholder {color:#ffffffa8;}
 ::-moz-placeholder          {color:#ffffffa8;}/* Firefox 19+ */

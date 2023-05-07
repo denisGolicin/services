@@ -81,6 +81,14 @@
       .shadow-box>div>p{
         font-size: 10px;
       }
+    .ar-title-m{
+        display: block;
+        margin-bottom: 30px;
+    }
+    .ar-title{
+        display: none;
+    }
+
 }
 @media (min-height: 700px){
     .wrapper-about{
