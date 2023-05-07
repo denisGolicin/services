@@ -382,7 +382,7 @@ sendAPI();
 function sendAPI(){
     const xhr = new XMLHttpRequest();
     const url = host;
-    xhr.open('GET', `${url}`);
+    xhr.open('GET', `${url}?client=1`);
     xhr.onload = function () {
         if (xhr.status === 200) {
             //const response = JSON.parse(xhr.responseText);
