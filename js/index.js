@@ -1,4 +1,4 @@
-const host = 'https://cw38660.tw1.ru/';
+const host = 'https://litec-soft.ru/';
 let containerDescriptor = [];
 containerDescriptor = document.querySelectorAll('.container-descriptor');
 const containerItemCount = document.querySelector('.container-item-count');
