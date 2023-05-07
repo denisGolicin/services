@@ -378,7 +378,7 @@ function notificationShow(text){
     }, 600);
 
 }
-sendAPI();
+//sendAPI();
 function sendAPI(){
     const xhr = new XMLHttpRequest();
     const url = host;

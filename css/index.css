@@ -297,6 +297,13 @@ a, .header-el>p{
   margin-top: 30px;
   border-bottom: 1px solid #fff;
 }
+.project-mobile{
+  width: 100%;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .button-bg{
   width: fit-content;
   background-color:#2871b5;
@@ -648,7 +655,6 @@ footer>img:hover{
   justify-content: center;
   align-items: center;
 
-  margin-bottom: 30px;
 }
 .mobile-block{
   width: 30%;
@@ -865,6 +871,10 @@ textarea{
   transform: rotate(-5deg);
   display: none;
 
+}
+.modelviewer{
+  width: 90%;
+  border: 1px solid red;
 }
 ::-webkit-input-placeholder {color:#ffffffa8;}
 ::-moz-placeholder          {color:#ffffffa8;}/* Firefox 19+ */
