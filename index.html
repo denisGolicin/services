@@ -16,7 +16,7 @@
 	<meta name="author" content= "https://denisgolicin.github.io/services/">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-	<script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer"></script>
+	<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
 	
 
 	<link rel="apple-touch-icon" sizes="180x180" href="https://itdilab.ru/themes/digitallab/assets/icons/apple-touch-icon.png">
@@ -286,7 +286,9 @@
 		</div>
 		<div class="wrapper-sites overflow-off">
 			<div class="wrapper-site">
-				<model-viewer class="modelviewer" src="https://cdn.glitch.com/a530b1a9-ae90-4449-a70b-6f451c55a29e%2Fastro-boy.dae?1512598271992" alt="Космонавт"></model-viewer>
+				<model-viewer class="modelviewer" id="mv-demo" shadow-intensity="1" src="src/example.glb"
+				alt="A 3D model of an astronaut" auto-rotate camera-controls
+				poster=""></model-viewer>	
 			</div>
 
 			<div class="wrapper-site-description">
