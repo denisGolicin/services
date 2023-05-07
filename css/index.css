@@ -296,6 +296,14 @@ a, .header-el>p{
 .projects-all{
   margin-top: 30px;
   border-bottom: 1px solid #fff;
+  position: relative;
+}
+.projects-all>img{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 18px;
+  transform: translate(-125%, -50%);
 }
 .project-mobile{
   width: 100%;
