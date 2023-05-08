@@ -96,6 +96,32 @@
         
         width: 100%;
     }
+    .wrapper-contacts-info{
+        flex-direction:  column;
+    }
+    .plah-title{
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .plah-title-center{
+        margin-left: 0;
+    }
+    .addres-text{
+        margin-right: 0;
+        margin-left: 0;
+        text-align: center;
+    }
+    .links-text{
+        width: 100%;
+        text-align: center;
+    }
+    .contacts-text{
+        text-align: center;
+    }
+    .contacts-title{
+        margin-bottom: 0;
+    }
 
 }
 @media (min-height: 700px){

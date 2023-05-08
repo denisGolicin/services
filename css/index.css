@@ -448,6 +448,14 @@ a, .header-el>p{
   box-shadow: 0 0 40px rgba(0, 0, 0, .5) inset;
   border-bottom: 10px solid #ffffff25;
 }
+.wrapper-contacts{
+  width: 100%;
+  position: relative;
+
+  background: linear-gradient(to right, #8f31a6 0, #2871b5 100%);
+  box-shadow: 0 0 40px rgba(0, 0, 0, .5) inset;
+  border-bottom: 10px solid #ffffff25;
+}
 
 .container-descriptor{
 
@@ -946,6 +954,72 @@ textarea{
 .ar-title-m{
   width: 90%;
   display: none;
+}
+.wrapper-contacts{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wrapper-contacts-info{
+  width: 90%;
+  display: flex;
+  margin-bottom: 30px;
+  justify-content: center;
+}
+.contacts-title{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 20px;
+  text-shadow: 0 0 5px black;
+}
+.plah-title{
+  color: #fff;
+  font-size: 18px;
+  text-shadow: 0 0 5px black;
+}
+.plah-title-center{
+  margin-left: 50px;
+}
+.addres-text:first-child{
+  margin-top: 0;
+}
+.addres-text{
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #0000002f;
+  color: #fff;
+  box-shadow: 0 0 5px black;
+
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.contacts-text:first-child{
+  margin-top: 0;
+}
+.contacts-text{
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color:#515e97;
+  color: #fff;
+  box-shadow: 0 0 5px black;
+  
+}
+.links-text:first-child{
+  margin-top: 0;
+}
+.links-text{
+  margin-top: 10px;
+  width: fit-content;
+  color: #fff;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 2px;
 }
 ::-webkit-input-placeholder {color:#ffffffa8;}
 ::-moz-placeholder          {color:#ffffffa8;}/* Firefox 19+ */
