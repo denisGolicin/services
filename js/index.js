@@ -13,6 +13,9 @@ const startProject = document.querySelector('#start-project');
 const buySite = document.querySelector('#buy-site');
 const buyBot = document.querySelector('#buy-bot');
 
+const buttonCall = document.querySelector('#button-call');
+const buttonMail = document.querySelector('#button-mail');
+
 let notificationFlag = false;
 
 let curcleMoveFlag = false;
@@ -94,6 +97,8 @@ enterLogin.addEventListener('click', function(){
     title.innerHTML = 'Авторизация';
     buttonAuth.style.display = 'block';
     buttonForm.style.display = 'none';
+    buttonCall.style.display = 'none';
+    buttonMail.style.display = 'none';
 
 });
 startProject.addEventListener('click', function(){
@@ -122,6 +127,8 @@ buySite.addEventListener('click', function(){
     info.style.display = 'block';
     buttonAuth.style.display = 'none';
     buttonForm.style.display = 'block';
+    buttonCall.style.display = 'block';
+    buttonMail.style.display = 'block';
     title.innerHTML = 'Новая заявка';
 });
 buyBot.addEventListener('click', function(){
