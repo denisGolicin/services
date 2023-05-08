@@ -380,7 +380,7 @@ function notificationShow(text){
         // }, 300);
     }, 600);
 }
-//sendAPI();
+sendAPI();
 function sendAPI(){
     const xhr = new XMLHttpRequest();
     const url = host;
