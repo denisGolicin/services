@@ -908,6 +908,7 @@ textarea{
   background-position: center;
   cursor: pointer;
   transition: .3s;
+  z-index: 10;
 }
 .ar-button:hover{
   transform: translate(-130%, -130%) scale(1.07);
