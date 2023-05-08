@@ -91,6 +91,10 @@
     .description-text{
         width: 100%;
     }
+    .description-job{
+        
+        width: 100%;
+    }
 
 }
 @media (min-height: 700px){
