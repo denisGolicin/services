@@ -119,8 +119,8 @@
     .contacts-text{
         text-align: center;
     }
-    .contacts-title{
-        margin-bottom: 0;
+    .me-contact{
+        display: none;
     }
 
 }
