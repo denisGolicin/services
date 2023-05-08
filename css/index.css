@@ -1018,8 +1018,10 @@ textarea{
   margin-top: 10px;
   width: fit-content;
   color: #fff;
-  border-bottom: 2px solid #fff;
-  padding-bottom: 2px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #8f31a6;
+  box-shadow: 0 0 5px black;
 }
 ::-webkit-input-placeholder {color:#ffffffa8;}
 ::-moz-placeholder          {color:#ffffffa8;}/* Firefox 19+ */
