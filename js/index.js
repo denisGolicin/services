@@ -26,19 +26,17 @@ if (document.cookie.indexOf('auth=1') !== -1){
     const n = getCookie('name');
     loginName.innerHTML = n;
     userName.innerHTML = n;
-    notificationShow(`Здравствуйте, ${n}!<br>Ради снова Вас видеть!`); // что
+    notificationShow(`Здравствуйте, ${n}!<br>Ради снова Вас видеть!`); 
 
 } else {
     if(document.cookie.indexOf('connect=1') !== -1){
-        
+        notificationShow(`Здравствуйте!<br>Ради снова Вас видеть!`); 
     } else {
-
+        notificationShow("Привет! Меня зовут Фектс! <br>Я буду Вашим ассистентом!<br>Нажмите на уведомление и оно закроется!");
+        setTimeout(() => {
+            notificationShow("Я использую Ваши cookie, чтобы<br>Вам было удобнее пользоватся<br>нашим сайтом! <a class='notifiction-link' href='#'>Подробнее</a>");
+        }, 5000);
     }
-    notificationShow("Привет! Меня зовут Фектс! <br>Я буду Вашим ассистентом!<br>Нажмите на уведомление и оно закроется!");
-
-    setTimeout(() => {
-        notificationShow("Я использую Ваши cookie, чтобы<br>Вам было удобнее пользоватся<br>нашим сайтом! <a class='notifiction-link' href='#'>Подробнее</a>");
-    }, 5000);
 }
 
 for(let i = 0; i < containerDescriptor.length; i++){
