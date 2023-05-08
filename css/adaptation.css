@@ -43,7 +43,7 @@
         margin-bottom: 30px;
     }
     .bot-icon{
-        top: 30%;
+        top: 9%;
         transform: translate(-50%, -50%) rotate(-33deg);
     }
     .mobile-blocks-wrapper{
@@ -87,6 +87,9 @@
     }
     .ar-title{
         display: none;
+    }
+    .description-text{
+        width: 100%;
     }
 
 }

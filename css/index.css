@@ -268,6 +268,10 @@ a, .header-el>p{
   color: #fff;
   margin-top: 20px;
   text-align: center;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.151);
+  border-radius: 10px;
+  box-shadow: 0 0 5px black;
 }
 .description-bottom{
   margin-top: 20px;
