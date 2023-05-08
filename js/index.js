@@ -29,6 +29,11 @@ if (document.cookie.indexOf('auth=1') !== -1){
     notificationShow(`Здравствуйте, ${n}!<br>Ради снова Вас видеть!`); // что
 
 } else {
+    if(document.cookie.indexOf('connect=1') !== -1){
+        
+    } else {
+
+    }
     notificationShow("Привет! Меня зовут Фектс! <br>Я буду Вашим ассистентом!<br>Нажмите на уведомление и оно закроется!");
 
     setTimeout(() => {
@@ -376,23 +381,20 @@ function notificationShow(text){
             
         // }, 300);
     }, 600);
-
 }
 sendAPI();
 function sendAPI(){
     const xhr = new XMLHttpRequest();
     const url = host;
-    xhr.open('GET', `${url}?client=1`);
+    xhr.open('GET', `${url}?client=1&connect=` + getCookie('connect'));
     xhr.onload = function () {
         if (xhr.status === 200) {
-            //const response = JSON.parse(xhr.responseText);
-            // if (response.error) {
-            //     console.log(`Ошибка авторизации: ${response.error}`);
-            // } else {
-                
-                
-            // }
-            console.log(xhr.responseText)
+
+            const now = new Date();
+            const expirationDate = new Date(now.getTime() + 30 * 24 * 60 * 60 * 1000);
+            document.cookie = `connect=1; expires=${expirationDate.toUTCString()}; path=/`;
+
+            console.log(xhr.responseText);
         } 
         else {
             console.log(response)
