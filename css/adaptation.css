@@ -43,6 +43,7 @@
         margin-bottom: 30px;
     }
     .bot-icon{
+        left: 100%;
         top: 9%;
         transform: translate(-50%, -50%) rotate(-33deg);
     }

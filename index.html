@@ -293,12 +293,14 @@
 		<div class="wrapper-sites overflow-off">
 			<p class="description-title ar-title-m" style="text-align: center;">Дополненая реальность AR</p>
 			<div class="wrapper-site">
-				<model-viewer class="modelviewer" id="mv-demo" shadow-intensity="1" src="src/example.glb"
-				ar-modes="scene-viewer webxr quick-look"
-				alt="3d-dog" auto-rotate camera-controls autoplay
-				poster="">
-				<button slot="ar-button" class="ar-button"></button>
-			</model-viewer>	
+				<div class="model-wrapper">
+					<model-viewer class="modelviewer" id="mv-demo" shadow-intensity="1" src="src/example.glb"
+					ar-modes="scene-viewer webxr quick-look"
+					alt="3d-dog" auto-rotate camera-controls autoplay
+					poster="">
+					</model-viewer>	
+					<button slot="ar-button" class="ar-button"></button>
+				</div>
 			</div>
 
 			<div class="wrapper-site-description">
