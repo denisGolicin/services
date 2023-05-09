@@ -97,7 +97,9 @@
         width: 100%;
     }
     .wrapper-contacts-info{
+        width: 80%;
         flex-direction:  column;
+        align-items: center;
     }
     .plah-title{
         text-align: center;
@@ -113,10 +115,14 @@
         text-align: center;
     }
     .links-text{
-        width: 100%;
+        
         text-align: center;
     }
+    .contacts{
+        width: 80%;
+    }
     .contacts-text{
+        
         text-align: center;
     }
     .me-contact{
