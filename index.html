@@ -296,10 +296,17 @@
 			<p class="description-title ar-title-m" style="text-align: center;">Дополненая реальность AR</p>
 			<div class="wrapper-site">
 				<div class="model-wrapper">
-					<model-viewer class="modelviewer" id="mv-demo" shadow-intensity="1" src="src/example.glb"
+					<model-viewer 
+					class="modelviewer" id="mv-demo" 
+					shadow-intensity="1" 
+					src="src/example.glb"
+					ios-src = "src/example.usdz"
 					ar
 					ar-modes="scene-viewer webxr quick-look"
-					alt="3d-dog" auto-rotate camera-controls autoplay
+					alt="3d-dog" 
+					auto-rotate 
+					camera-controls 
+					autoplay
 					poster="">
 					</model-viewer>	
 					<button onclick="document.querySelector('model-viewer').activateAR()" slot="ar-button" class="ar-button"></button>

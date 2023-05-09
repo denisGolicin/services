@@ -29,11 +29,11 @@ if (document.cookie.indexOf('auth=1') !== -1){
     const n = getCookie('name');
     loginName.innerHTML = n;
     userName.innerHTML = n;
-    notificationShow(`Здравствуйте, ${n}!<br>Ради снова Вас видеть!`); 
+    notificationShow(`Здравствуйте, ${n}!<br>Рады снова Вас видеть!`); 
 
 } else {
     if(document.cookie.indexOf('connect=1') !== -1){
-        notificationShow(`Здравствуйте!<br>Ради снова Вас видеть!`); 
+        notificationShow(`Здравствуйте!<br>Рады снова Вас видеть!`); 
     } else {
         notificationShow("Привет! Меня зовут Фектс! <br>Я буду Вашим ассистентом!<br>Нажмите на уведомление и оно закроется!");
         setTimeout(() => {

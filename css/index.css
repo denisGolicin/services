@@ -1016,12 +1016,13 @@ textarea{
 }
 .links-text{
   margin-top: 10px;
-  width: fit-content;
+  width: 100%;
   color: #fff;
   padding: 10px;
   border-radius: 5px;
   background-color: #8f31a6;
   box-shadow: 0 0 5px black;
+  cursor: pointer;
 }
 ::-webkit-input-placeholder {color:#ffffffa8;}
 ::-moz-placeholder          {color:#ffffffa8;}/* Firefox 19+ */
